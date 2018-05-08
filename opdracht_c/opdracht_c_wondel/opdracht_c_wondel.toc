@@ -1,0 +1,5 @@
+\babel@toc {dutch}{}
+\contentsline {section}{\numberline {1}Team SWOT}{3}
+\contentsline {section}{\numberline {2}Individuele SWOT}{4}
+\contentsline {section}{\numberline {3}Taakverdeling}{5}
+\contentsline {section}{\numberline {4}Rol: de "Verbinder"}{5}
