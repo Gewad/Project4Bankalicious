@@ -2,6 +2,7 @@ Bytegroep 8:
 Certificaten:
 kan je verschillende opties doorgeven, je moet dan bepaalde parameters opsturen
 client heeft een thread dat verbindt met een socket
+(Socket Methode)
 
 bytegroep 9:
 Gelijk van de client naar de database
