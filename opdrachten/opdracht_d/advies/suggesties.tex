@@ -1,0 +1,63 @@
+\documentclass{article}
+
+\usepackage[dutch]{babel}
+
+\begin{document}
+\section{Centrale Server}
+De eerste, en in eerste instantie voornamelijkste optie is een centrale bank.
+Deze zorgt voor communicatie tussen de servers.
+(Opzoeken saldos, inlogpogingen, geld overmaken en overboeken).
+De Centrale Server sluit verbindingen met andere banken wanneer deze niet nodig zijn (Niet de verbinding met jouw bank).
+Dit zorgt er voor dat de kans dat de server overbelast wordt verminderd.
+
+\vspace{5mm}
+\textbf{Voordelen:}
+\begin{description}
+\item Een verbinding per bank nodig, er is per bank maar 1 verbinding nodig en dit neemt dus weinig ruimte in beslag om gebruikt te worden voor.
+\item Minder risico dan als je los met alle banken verbindt
+\end{description}
+
+\vspace{5mm}
+\textbf{Nadelen:}
+\begin{description}
+\item Je bent afhankelijk van de server, als die niet draait ben je fucked.
+\item Je levert een klein beetje controle in. (Denk aan: tabel van kaarten bij andere banken)
+\end{description}
+
+\vspace{5mm}
+\textbf{Mogelijkheden:}
+\begin{description}
+\item SQL op de centrale server die verbindingen tussen UIDs en Banken bijhouden.
+\item Speciale manier van verbinden met de server (Beter beveiligd).
+\item Keuze om verbindingen met alle servers open te houden, alle verbindingen open houden is sneller maar belast de server meer.
+\item Je kan ook alle verbindingen sluiten.
+\end{description}
+
+\clearpage
+\newpage
+
+\section{Losse verbinding tussen alle servers:}
+Op deze manier heb je per ATM verbinding met alle servers,
+op het moment dat de server met de server verbindt wordt er verbinding gemaakt met alle servers (of niet).
+
+\vspace{5mm}
+\textbf{Voordelen:}
+\begin{description}
+\item Zelf controle over alles wat er gebeurt.
+\item Alleen van jezelf afhankelijk (en de andere servers(-ish))
+\end{description}
+
+\vspace{5mm}
+\textbf{Nadelen:}
+\begin{description}
+\item Je hebt veel belasting op je server van de verbindingen met de andere servers.
+\end{description}
+
+\vspace{5mm}
+\textbf{Mogelijkheden:}
+\begin{description}
+\item Eigen database kan verbinding kaarten en banken bijhouden.
+\item Keuze om verbindingen met alle servers open te houden, alle verbindingen open houden is sneller maar belast de server meer. Je kan ook alle verbindingen sluiten.
+\end{description}
+
+\end{document}
