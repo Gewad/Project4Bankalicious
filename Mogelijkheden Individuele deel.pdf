@@ -1,0 +1,133 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Mogelijke Oplossingen Globale Bank}
+\author{Gerard van Walraven}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+%\newpage
+\section{Centrale Server}
+
+De eerste, en in eerste instantie voornamelijkste optie is een centrale server. Deze zorgt voor communicatie tussen de servers. ( Opzoeken saldos, inlogpogingen, geld overmaken en overboeken).
+\newline \newline
+Voordelen:
+\begin{itemize}
+\item Een verbinding per bank nodig, er is per bank maar 1 verbinding nodig en dit neemt dus weinig ruimte in beslag om gebruikt te worden voor andere verbindingen.
+\item Minder risico dan als je los met alle andere banken verbind, doordat als de centrale bank uitvalt je nogsteeds je eigen klanten kan helpen.
+\end{itemize}
+Nadelen:
+\begin{itemize}
+\item Je bent afhankelijk van de server, als die niet draait kan je niks met andere banken.
+\item Je levert een klein beetje controle in. (Denk aan: tabel van kaarten bij andere banken)
+\end{itemize}
+Mogelijkheden:
+\begin{itemize}
+\item SQL op de centrale server die verbindingen tussen UIDs en Banken vastleggen.
+\item Speciale manier van verbinden met de server (Beter beveiligd).
+\item Keuze om verbindingen met alle servers open te houden, alle verbindingen open houden is sneller maar belast de server meer. Je kan ook alle verbindingen sluiten.
+\end{itemize}
+
+
+\newpage
+
+
+\section{Directe Verbinding Tussen Servers}
+
+Op deze manier heb je per ATM verbinding met alle servers, op het moment dat de server met de server verbindt wordt er verbinding gemaakt met alle servers (of niet).
+\newline \newline
+Voordelen:
+\begin{itemize}
+\item Zelf controle over alles wat er gebeurt.
+\item Als een van de andere servers uitvalt verlies je maar 1 functinaliteit.
+\end{itemize}
+Nadelen:
+\begin{itemize}
+\item Je hebt veel belasting op je server van de verbindingen met de andere servers. (Hierdoor kan je eigen server sneller uitvallen, en alle functionaliteit wegvallen)
+\end{itemize}
+Mogelijkheden:
+\begin{itemize}
+\item Eigen database kan verbinding tussen kaarten en banken vastleggen.
+\item Keuze om verbindingen met alle servers open te houden, alle verbindingen open houden is sneller maar belast de server meer. Je kan ook alle verbindingen sluiten.
+\end{itemize}
+
+
+\newpage
+
+
+\section{Cirkel Verbinding Tussen de Servers}
+
+Hierbij heeft elke server een volgende server waarmee hij contact maakt, op het moment dat de server een kaart niet kent zal hij het bij de volgende gaan vragen.
+\newline
+(Gebruik dit alsjeblieft niet)
+\newline \newline
+Voordelen:
+\begin{itemize}
+\item Het zou kunnen werken.
+\end{itemize}
+Nadelen:
+\begin{itemize}
+\item Alles duurt lang.
+\item Gruwlijk inneficient.
+\end{itemize}
+Mogelijkheden:
+\begin{itemize}
+\item Bijna niks.
+\end{itemize}
+
+\end{document}
