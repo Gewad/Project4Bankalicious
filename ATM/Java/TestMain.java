@@ -1,4 +1,4 @@
-package javaATM;
+package ATM;
 
 public class TestMain {
 
