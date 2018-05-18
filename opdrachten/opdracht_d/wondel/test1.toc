@@ -1,0 +1,16 @@
+\babel@toc {dutch}{}
+\contentsline {section}{\numberline {1}i3 Window Manager Controls}{3}{section.1}
+\contentsline {section}{\numberline {2}Linux Basic Commands}{4}{section.2}
+\contentsline {section}{\numberline {3}C++ in Linux}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Install C/C++ compiler and related tools}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Verify installation}{6}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}How to Compile and Run C/C++ program on Linux}{6}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}How do I compile the program on Linux?}{7}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}How do I run or execute the program I made on Linux?}{7}{subsubsection.3.3.2}
+\contentsline {section}{\numberline {4}Mounting USB devices}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Dectecting USB Hard Drive}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Create a mount point}{8}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Mount USB Drive}{8}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Access USB Data}{9}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Unmount USB}{9}{subsection.4.5}
+\contentsline {section}{\numberline {5}Git}{10}{section.5}
