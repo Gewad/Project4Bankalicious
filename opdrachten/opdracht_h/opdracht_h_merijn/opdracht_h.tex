@@ -1,0 +1,67 @@
+\documentclass{article}
+
+\usepackage{graphicx,rotating,booktabs}
+\usepackage[dutch]{babel}
+
+\begin{document}
+% no page numbers
+\pagenumbering{gobble}
+
+%-----table-----%
+\begin{sidewaystable}[h!]
+
+% table settings
+\caption{Risico log}
+\label{tab: Risico log}
+\bigskip
+\hspace*{-1cm}\begin{tabular}{l l c c c c l  c c c c}
+%\toprule
+\newcounter{counter}
+\setcounter{counter}{1}
+
+%table content
+&\textbf{Beschrijving risico} &\textbf{Kans} &\textbf{Impact} &\textbf{Risico} &\textbf{Status} &\textbf{Beschrijving status} &\textbf{Datum} \\
+\midrule
+
+\textbf{ \arabic{counter}} & Persoonlijke onderdeel niet op tijd afkrijgen	& 3 & 5 & 15 & N & Loop niet achter & 18-4-018 \\
+\addtocounter{counter}{1}
+\textbf{\arabic{counter}} & Ik krijg mijn persoonlijk bank niet werkend 	& 3 & 5 & 15 & B & Hier moet ik veel tijd in stoppen & 18-4-018 \\
+\addtocounter{counter}{1}
+\textbf{\arabic{counter}} & Te veel lessen missen				& 1 & 5 & 10 & N & 0 Lessen gemist & 18-4-018 \\
+\addtocounter{counter}{1}
+\textbf{\arabic{counter}} & Moet stoppen met studie 				& 1 & 5 & 5  & N & Genoeg studiepunten, voor nu & 18-4-018 \\
+\addtocounter{counter}{1}
+\textbf{\arabic{counter}} & Mijn computer besluit niet meer te werken 		& 1 & 1 & 1  & N & Werkt goed, en heb een reserve & 18-4-018 \\
+\addtocounter{counter}{1}
+\textbf{\arabic{counter}} & Ik wordt spontaan depressief			& 1 & 1 & 1  & N & Ik ben emotioneel stabiel, geen zorgen & 18-4-018 \\
+\addtocounter{counter}{1}
+
+\end{tabular}\hspace*{-1cm}
+\end{sidewaystable}
+
+%-----table-----%
+\begin{sidewaystable}[h!]
+
+% table settings
+\caption{Tabel beschrijving}
+\label{tab: Tabel beschrijving}
+\bigskip
+\centering\small\setlength\tabcolsep{2pt}
+\hspace*{-1cm}\begin{tabular}{l l l l }
+
+% table content
+\textbf{Afkorting} &\textbf{Beschrijving} \\
+N	& Nog geen probleem \\
+O	& Opgelost probleem \\
+B	& Nu een Bezig probleem \\
+NO	& Probleem niet kunnen oplossen \\
+\textbf{Rows} &\textbf{Aantal} \\
+Impact 	& [1-5] \\
+Kans 	& [1-5] \\
+Risico 	& [Impact*Kans] \\
+Datum	& Datum toegevoegd \\
+
+\end{tabular}\hspace*{-1cm}
+\end{sidewaystable}
+
+\end{document}
