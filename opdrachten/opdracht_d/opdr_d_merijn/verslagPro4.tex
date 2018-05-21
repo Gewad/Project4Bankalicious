@@ -1,0 +1,98 @@
+\documentclass{article}
+
+\usepackage[dutch]{babel}
+\usepackage[version=3]{mhchem} 
+
+\begin{document}
+
+\title{Inrichting Centrale bank}
+\author{Merijn Plagge}
+
+\maketitle
+
+\section{Inleiding}
+
+Voor project 4 moesten wij voor het individuele onderdeel een advies geven over de inrichting van de \emph{Centrale Bank}.
+Aan het eind van week 5 moeten een van de adviezen van de studenten worden gekozen en uitgewerkt de rest van de loop van het project.
+Wij moesten tijdens de loop van het project letten op vijf onderdelen: \emph{beheren, analyseren, adviseren ontwerpen en realiseren.}
+
+
+\newpage
+
+\section{Communicatie}
+
+\subsection{Centrale server?} 
+
+\subsection{protocol}
+
+\newpage
+
+\subsection{Opslag}
+
+\subsection{Analyze en advies beveiliging lokale opslag} 
+
+Hieronder zijn verschillende manieren te vinden hoe inloggegevens en andere gevoelige informatie op kunnen worden geslagen.
+Ik heb het hier over de voor en nadelen van deze manieren, en ook geef ik hier advies of het van toepassing is bij de bank.
+
+\subsubsection{Plain text}
+
+Dit is de meest onveilige manier om wachtwoorden, pincodes, RFID-codes op te slaan.
+Stel je database raakt op de een of andere manier blootgesteld aan onbevoegden personen, dan kan je makkelijk pincodes en RFID-codes aflezen. 
+Het is wel de makkelijkste manier om inloggegevens op te slaan.
+Je kan namelijk makkelijk alle gegevens opvragen zonder moeite.
+
+Maar sinds het hier om de beveiliging van een bank gaat is dit niet veilig genoeg.
+Tijdens het ontwikkelen van de centrale bank zou het wel tijdelijk kunnen worden toegepast om onderdelen te testen, en zou daarna vervangen moeten worden door een ge\"encrypt systeem.
+
+\subsubsection{Encrypt de hele database}
+
+Een andere veiligere optie is om de database lokaal te versleutelen.
+Stel de gebruiker stuurt een pincode naar de server, dan unencrypt de server die pincode in de database, en vergelijkt de pincodes.
+Dit is al een stuk veiliger dan een plain text wachtwoord, maar het heeft nog steeds een nadeel.
+Als een hacker de key om de database te ontsluitelen te pakken krijgt, dan kan hij alle wachtwoorden achterhalen.
+Ook zullen dezelfde wachtwoorden zichtbaar zijn, omdat de ge\"encripte wachtwoorden er hetzelfde uitzien.
+
+Mijn advies is om ook dit systeem niet te gebruiken, al is het een stuk veiliger dan plain text.
+Het zou voor een schoolprojectje goed genoeg zijn, sinds zelfs grote bedrijven deze fouten nog maken, maar het is beter om de later beschreven manieren te gebruiken.
+
+\newpage
+
+\subsubsection{Hashing}
+
+Naast de hele database te versleutelen kan je ook de individuele pincodes and RFID codes hashen.
+Het moet een langzame hashinging methode zijn omdat je anders als hacker snel wachtwoorden zou kunnen raden.
+Goede hashing aloritmes hiervoor zouden kunnen zijn: \emph{scrypt, bcrypt of PBKDF2}.
+Md5 is hier bijvoorbeeld niet voor geschikt omdat het erg snel is.
+Het moment dat de gebruiker bijvoorbeeld een pincode invoert, zal deze gehashed worden.
+Zodra deze bij de database aankomt zullen de hashes worden vergeleken.
+Dit is veiliger dan de hele database te encrypten, omdat de gegevens niet meer geunencrypt hoeven te worden.
+Je hebt jammer genoeg nog steeds het probleem dat je versleutende data met elkaar kunt vergelijken.
+Gebruikers met hetzelfde wachtwoord zullen ook dezelfde hash hebben.
+Je hebt ook zogenaamde rainbow tables.
+Dit zijn tabellen waar mensen de hashes al voor je hebben uitgerekend.
+Zo kan je ook snel door de meer zware hashing aloritmes heen gaan, en zijn deze ook niet veilig.
+
+\hfill
+
+\centerline{\ce{pincode ->[hash] hashed} \ce{pincode} }
+
+\subsubsection{Hashing and Salting}
+
+De beveiligingsproblemen die overblijven bij hashen zijn op te lossen, waarna geen beveiligingsproblemen overblijven met de database.
+Ze zijn op te lossen door midden van \emph{Salting}.
+Dit is een voor iedere gebruiker random gegenereerde string die je opslaat in de database.
+Het idee is om gevoelige gegevens, als ze worden ingevoerd aan deze string to koppelen, waarna je ze door een hashing algoritme stuurt.
+Het resultaat sla je op in je database.
+Als de gebruiker een pincode invoert dan zal eerst de salt worden toegegoegd, waarna het door een hashing methode gaat.
+Daarna wordt het vergeleken met de database.
+Ik raad aan om dit systeem te gebruiken voor de "Centrale server".
+
+Hieronder is visueel weergegeven hoe een pincode eerst een Salt krijgt, en daarna door een hashing algoritme gaat.
+
+\hfill
+
+\centerline{\ce{pincode ->[Salting] pincode $+$ salt ->[hash] hashed} \ce{string} }
+
+\end{document}
+
+
