@@ -21,9 +21,31 @@ Wij moesten tijdens de loop van het project letten op vijf onderdelen: \emph{beh
 
 \section{Communicatie}
 
-\subsection{Centrale server?} 
+\subsection{Server of servers?} 
+
+Er zijn kortgezecht twee opties om de server(s) op te zetten.
+Of wel \"e\"en centrale server, or meerdere losse servers die met elkaar praten.
+Hieronder zal ik uitleggen welke ik gekozen heb en waarom.
+
+TODO Netwerkdiagram, Dataflow diagram, componenten.
+TODO Kwaliteitseisen doorkijken en toevoegen.
+
+\subsubsection{Centrale server}
+
+\subsubsection{Verbonden servers}
 
 \subsection{protocol}
+
+\subsubsection{MQTT of MQ?}
+
+MQ, want \"e\"en client \"e\"en consumer.
+
+Hoe?
+
+\section{Database}
+
+Wat geincript?
+Waar geplaats?
 
 \newpage
 
@@ -80,12 +102,15 @@ Zo kan je ook snel door de meer zware hashing aloritmes heen gaan, en zijn deze 
 
 De beveiligingsproblemen die overblijven bij hashen zijn op te lossen, waarna geen beveiligingsproblemen overblijven met de database.
 Ze zijn op te lossen door midden van \emph{Salting}.
+Ik raad dan ook aan om dit systeem te gebruiken voor de beveiliging.
 Dit is een voor iedere gebruiker random gegenereerde string die je opslaat in de database.
 Het idee is om gevoelige gegevens, als ze worden ingevoerd aan deze string to koppelen, waarna je ze door een hashing algoritme stuurt.
 Het resultaat sla je op in je database.
-Als de gebruiker een pincode invoert dan zal eerst de salt worden toegegoegd, waarna het door een hashing methode gaat.
-Daarna wordt het vergeleken met de database.
-Ik raad aan om dit systeem te gebruiken voor de "Centrale server".
+Als de gebruiker een pincode invoert dan zal eerst de salt worden toegevoegd.
+Dit moet in de Arduino gebeuren sinds data tussen de computer en Arduino kan worden afgeluisterd.
+De Arduino zal ook de pincode hashen.
+Hierna stuurt de Arduino deze string via de computer naar de server.
+Op de server zal de binnenkomende hash vergeleken worden met de hash in de database.
 
 Hieronder is visueel weergegeven hoe een pincode eerst een Salt krijgt, en daarna door een hashing algoritme gaat.
 
