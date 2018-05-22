@@ -2,20 +2,27 @@
 
 \usepackage[dutch]{babel}
 \usepackage[version=3]{mhchem} 
+\usepackage{hyperref}
+
 
 \begin{document}
 
-\title{Inrichting Centrale bank}
-\author{Merijn Plagge}
+\title{\huge{Inrichting Centrale bank} }
+\author{Merijn Plagge \\ 0941200}
 
 \maketitle
 
-\section{Inleiding}
+\begin{abstract}
 
 Voor project 4 moesten wij voor het individuele onderdeel een advies geven over de inrichting van de \emph{Centrale Bank}.
 Aan het eind van week 5 moeten een van de adviezen van de studenten worden gekozen en uitgewerkt de rest van de loop van het project.
 Wij moesten tijdens de loop van het project letten op vijf onderdelen: \emph{beheren, analyseren, adviseren ontwerpen en realiseren.}
 
+\end{abstract}
+
+\newpage
+
+\tableofcontents
 
 \newpage
 
@@ -23,12 +30,12 @@ Wij moesten tijdens de loop van het project letten op vijf onderdelen: \emph{beh
 
 \subsection{Server of servers?} 
 
-Er zijn kortgezecht twee opties om de server(s) op te zetten.
-Of wel \"e\"en centrale server, or meerdere losse servers die met elkaar praten.
+Er zijn kort gezecht twee opties om de server(s) op te zetten.
+Of wel \'e\'en centrale server, or meerdere losse servers die met elkaar praten.
 Hieronder zal ik uitleggen welke ik gekozen heb en waarom.
 
-TODO Netwerkdiagram, Dataflow diagram, componenten.
-TODO Kwaliteitseisen doorkijken en toevoegen.
+%TODO Netwerkdiagram, Dataflow diagram, componenten.
+%TODO Kwaliteitseisen doorkijken en toevoegen.
 
 \subsubsection{Centrale server}
 
@@ -82,9 +89,11 @@ Het zou voor een schoolprojectje goed genoeg zijn, sinds zelfs grote bedrijven d
 \subsubsection{Hashing}
 
 Naast de hele database te versleutelen kan je ook de individuele pincodes and RFID codes hashen.
-Het moet een langzame hashinging methode zijn omdat je anders als hacker snel wachtwoorden zou kunnen raden.
+Het verschil tussen een hash en een ge\:encrypte string is dat je een hash niet terug kunt zetten naar het origineel met een key. 
+Een hash kan je wel zelf terugrekenen.
+Het moet dus een langzame hashinging methode zijn omdat je anders als hacker snel wachtwoorden zou kunnen raden.
 Goede hashing aloritmes hiervoor zouden kunnen zijn: \emph{scrypt, bcrypt of PBKDF2}.
-Md5 is hier bijvoorbeeld niet voor geschikt omdat het erg snel is.
+Md5 is hier bijvoorbeeld niet voor geschikt omdat hier hashes snel te berekenen zijn.
 Het moment dat de gebruiker bijvoorbeeld een pincode invoert, zal deze gehashed worden.
 Zodra deze bij de database aankomt zullen de hashes worden vergeleken.
 Dit is veiliger dan de hele database te encrypten, omdat de gegevens niet meer geunencrypt hoeven te worden.
