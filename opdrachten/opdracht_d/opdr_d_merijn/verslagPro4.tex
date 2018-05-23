@@ -56,7 +56,7 @@ Waar geplaats?
 
 \newpage
 
-\subsection{Opslag}
+\subsection{Gevoelige gegevens}
 
 \subsection{Analyze en advies beveiliging lokale opslag} 
 
@@ -115,17 +115,22 @@ Ik raad dan ook aan om dit systeem te gebruiken voor de beveiliging.
 Dit is een voor iedere gebruiker random gegenereerde string die je opslaat in de database.
 Het idee is om gevoelige gegevens, als ze worden ingevoerd aan deze string to koppelen, waarna je ze door een hashing algoritme stuurt.
 Het resultaat sla je op in je database.
-Als de gebruiker een pincode invoert dan zal eerst de salt worden toegevoegd.
+Als de gebruiker een pincode invoert dan zal eerst de pincode ge\"incrypt moeten worden.
 Dit moet in de Arduino gebeuren sinds data tussen de computer en Arduino kan worden afgeluisterd.
-De Arduino zal ook de pincode hashen.
 Hierna stuurt de Arduino deze string via de computer naar de server.
-Op de server zal de binnenkomende hash vergeleken worden met de hash in de database.
+Op de server zal de binnenkomende pincode geonversluiteld worden.
+Hierna zal de salt worden toegevoegd, en heirna de hash worden toegevoegd.
+Dan wordt hash vergeleken worden met de hash in de database.
 
 Hieronder is visueel weergegeven hoe een pincode eerst een Salt krijgt, en daarna door een hashing algoritme gaat.
 
 \hfill
 
 \centerline{\ce{pincode ->[Salting] pincode $+$ salt ->[hash] hashed} \ce{string} }
+
+\section{Conclusie}
+
+Dit en dat moet gebeuren.
 
 \end{document}
 
