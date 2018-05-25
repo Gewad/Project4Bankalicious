@@ -1,4 +1,4 @@
-\Documentclass{article}
+\documentclass{article}
 
 \usepackage[dutch]{babel}
 
@@ -17,6 +17,11 @@ beschreven voor de inrichting van de Centrale Bank.
 \clearpage
 \newpage
 
+\tableofcontents
+
+\clearpage
+\newpage
+
 \section{Centrale Bank}
 De Centrale Bank kan fungeren als een zogenaamd tussenpersoon.
 De Centrale Bank is verbonden met alle lokale banken.
@@ -30,8 +35,9 @@ Elke lokale bank heeft een database waarin alle gegevens van hun klanten in staa
 Deze databases staan op een server van de lokale bank (dus een lokale server).
 
 
+
 \section{Server Communicatie}
-De 
+ 
 
 \subsection{Sockets}
 
@@ -40,15 +46,42 @@ De
 \subsection{Message Protocols}
 
 \subsubsection{MQ: Message Queuing}
-Message Queuing is een manier van werken waarbij een systeem berichten stuurt
-naar ander systeem of apparaat. Bij 
+Berichten worden door verschillende programmas gebruikt
+om data met elkaar te delen tussen een zender en ontvanger.
+Programmas gebruiken veel berichten na elkaar maar niet
+alle berichtn kunnen tegelijk verwerkt worden.
+Daarom is er een queue. Een gueue is een lijst met wachtende onderwerpen.
+Message Queuing zorgt ervoor dat de messages in een volgorde verstuurd worden.
+
+Message Queuing is een asynchroon communicatie protocol.
+Dat houdt in dat het systeem een bericht in een queue lijst plaatst
+en dat hoeft niet per direct verwerkt te worden.
+Email is een voorbeeld van asynchroon communicatie.
+
+Bij message queuing wordt er gebruik gemaakt van decoupling.
+Dit is om de afzender en ontvanger te van elkaar te scheiden.
+Decoupling is een proces dat delen van een systeem die afhankelijk
+zijn van elkaar scheidt en zelfstandig maakt.
+
+ 
+
 
 \subsubsection{MQTT: Message Queuing Telemetry Transport}
-MQTT is een protocol voor het versturen van berichten (messages).
-Met MQTT is het 
+MQTT heeft hetzelfde principe als MQ, maar MQTT is een protocol en MQ
+is een manier van werken.
 
 
 \section{Advies}
+
+\section{Kwaliteitseisen}
+
+\subsection{Security}
+Encryptie
+Firewall
+Arduino beveiliging
+
+
+
 
 
 \end{document}
