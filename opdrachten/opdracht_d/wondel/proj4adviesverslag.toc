@@ -6,6 +6,10 @@
 \contentsline {subsubsection}{\numberline {3.1.1}Java Applicatie}{3}
 \contentsline {subsection}{\numberline {3.2}Message Protocols}{3}
 \contentsline {subsubsection}{\numberline {3.2.1}MQ: Message Queuing}{3}
-\contentsline {subsubsection}{\numberline {3.2.2}MQTT: Message Queuing Telemetry Transport}{3}
+\contentsline {subsubsection}{\numberline {3.2.2}MQTT: Message Queuing Telemetry Transport}{4}
 \contentsline {section}{\numberline {4}Advies}{4}
 \contentsline {section}{\numberline {5}Kwaliteitseisen}{4}
+\contentsline {subsection}{\numberline {5.1}Security}{4}
+\contentsline {paragraph}{Encryptie}{4}
+\contentsline {paragraph}{Firewall}{4}
+\contentsline {paragraph}{Arduino beveiliging}{4}

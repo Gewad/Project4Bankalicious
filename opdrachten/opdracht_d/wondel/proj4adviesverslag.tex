@@ -63,22 +63,40 @@ Dit is om de afzender en ontvanger te van elkaar te scheiden.
 Decoupling is een proces dat delen van een systeem die afhankelijk
 zijn van elkaar scheidt en zelfstandig maakt.
 
- 
+Message queuing werkt als volgt.
+Een message producer(een applicatie bv) maakt een message aan met data erin.
+De message stuurt hij dan naar een 'Message Broker'.
+Een Message Broker houdt de message queue bij.
+Wanneer de producer al zijn messages naar de message broker
+gestuurd heeft stuurt de message broker de message queue naar
+de message consumer.
+De message consumer kan nu een voor een de messages in de message queue
+verwerken en hoeft zo niet alle messages tegelijk te behandelen.
+
+MQ brengt vele voordelen met zicht mee.
+MQ heeft redundantie via persistentie om data te blijven behouden.
+Je kan batches met messages zodat niet elke message appart wordt
+verstuurd, maar dat je in 1 keer een aantal messages stuurt.
+Dit zorgt voor de efficientie.
+MQ kan ook in verschillende talen worden geschreven.
+
+%Schrijven over MQ dat toepasselijk is op de centrale bank
 
 
 \subsubsection{MQTT: Message Queuing Telemetry Transport}
-MQTT heeft hetzelfde principe als MQ, maar MQTT is een protocol en MQ
-is een manier van werken.
+MQTT is het protocol dat gebruikt wordt om MQ (Message Queuing) toe te passen in een netwerk.
 
+%Schrijven hoe MQTT toepasselijk is op de centrale bank
 
 \section{Advies}
 
 \section{Kwaliteitseisen}
 
 \subsection{Security}
-Encryptie
-Firewall
-Arduino beveiliging
+
+\paragraph{Encryptie}
+\paragraph{Firewall}
+\paragraph{Arduino beveiliging}
 
 
 
