@@ -12,4 +12,4 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Encrypt de hele database}{4}{subsubsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.3}Hashing}{5}{subsubsection.2.2.3}
 \contentsline {subsubsection}{\numberline {2.2.4}Hashing and Salting}{5}{subsubsection.2.2.4}
-\contentsline {section}{\numberline {3}Conclusie}{5}{section.3}
+\contentsline {section}{\numberline {3}Conclusie}{6}{section.3}

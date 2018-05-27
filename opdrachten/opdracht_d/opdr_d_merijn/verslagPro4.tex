@@ -30,7 +30,7 @@ Wij moesten tijdens de loop van het project letten op vijf onderdelen: \emph{beh
 
 \subsection{Server of servers?} 
 
-Er zijn kort gezecht twee opties om de server(s) op te zetten.
+Er zijn kort gezegd twee opties om de server(s) op te zetten.
 Of wel \'e\'en centrale server, or meerdere losse servers die met elkaar praten.
 Hieronder zal ik uitleggen welke ik gekozen heb en waarom.
 
@@ -39,7 +39,13 @@ Hieronder zal ik uitleggen welke ik gekozen heb en waarom.
 
 \subsubsection{Centrale server}
 
+Dit is het makkelijkste systeem.
+Je hoeft namelijk maar \"e\"en server op te zetten.
+
 \subsubsection{Verbonden servers}
+
+Het veiligste idee is om meerdere servers te hebben.
+Als er een van de servers uitvalt, dan zal het banksysteem nog steeds werken.
 
 \subsection{protocol}
 
@@ -117,16 +123,19 @@ Het idee is om gevoelige gegevens, als ze worden ingevoerd aan deze string to ko
 Het resultaat sla je op in je database.
 Als de gebruiker een pincode invoert dan zal eerst de pincode ge\"incrypt moeten worden.
 Dit moet in de Arduino gebeuren sinds data tussen de computer en Arduino kan worden afgeluisterd.
+Hier wordt geen hashing gebruikt omdat je anders weet hoe de server wachtwoorden vergelijkt in de database.
 Hierna stuurt de Arduino deze string via de computer naar de server.
-Op de server zal de binnenkomende pincode geonversluiteld worden.
-Hierna zal de salt worden toegevoegd, en heirna de hash worden toegevoegd.
+Op de server zal de binnenkomende pincode gedecrypt worden.
+Hierna zal de salt worden toegevoegd, en de hash worden toegevoegd.
 Dan wordt hash vergeleken worden met de hash in de database.
 
-Hieronder is visueel weergegeven hoe een pincode eerst een Salt krijgt, en daarna door een hashing algoritme gaat.
+Hieronder is visueel weergegeven wat mijn model is om een pincode veilig te vergelijken naar de database te krijgen. De laatste hash zal vergeleken worden met de hash in de database.
 
 \hfill
 
-\centerline{\ce{pincode ->[Salting] pincode $+$ salt ->[hash] hashed} \ce{string} }
+\centerline{\ce{pin ->[\textbf{Arduino}\ encrytion] encryptedPin ->[\textbf{server}\ decryption] pin ->[salting] pin $+$ salt ->[hashing] hash}}
+
+\newpage
 
 \section{Conclusie}
 
