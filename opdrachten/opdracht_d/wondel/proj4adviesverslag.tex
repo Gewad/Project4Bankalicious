@@ -16,12 +16,10 @@ beschreven voor de inrichting van de Centrale Bank.
 \end{abstract}
 
 \clearpage
-\newpage
 
 \tableofcontents
 
 \clearpage
-\newpage
 
 \section{Centrale Bank}
 De Centrale Bank kan fungeren als een zogenaamd tussenpersoon.
@@ -36,9 +34,8 @@ Elke lokale bank heeft een database waarin alle gegevens van hun klanten in staa
 Deze databases staan op een server van de lokale bank (dus een lokale server).
 
 
-
 \section{Server Communicatie}
- 
+
 
 \subsection{Sockets}
 
@@ -73,6 +70,10 @@ gestuurd heeft stuurt de message broker de message queue naar
 de message consumer.
 De message consumer kan nu een voor een de messages in de message queue
 verwerken en hoeft zo niet alle messages tegelijk te behandelen.
+De messages hebben allemaal een topic.
+Aan de hand van de topic reageren de message clients op de message queue die
+door de message broker verstuurd wordt.
+
 
 MQ brengt vele voordelen met zicht mee.
 MQ heeft redundantie via persistentie om data te blijven behouden.
@@ -80,6 +81,14 @@ Je kan batches met messages zodat niet elke message appart wordt
 verstuurd, maar dat je in 1 keer een aantal messages stuurt.
 Dit zorgt voor de efficientie.
 MQ kan ook in verschillende talen worden geschreven.
+Berichten kunnen meerdere keren worden verstuurd.
+Er kunnen ook meerdere message clients zijn per topic.
+
+MQ heeft ook een aantal nadelen.
+Bij MQ weet de message producer niet wie zijn clienten zijn.
+Dus de message broker stuurt gewoon de message queue naar alle verbonden apparaten.
+Een message client moet verbonden zijn om een bericht te kunnen ontvangen
+anders wordt hij niet naar hem toegestuurd.
 
 
 
@@ -101,11 +110,45 @@ De server kan dan gerust per queue de berichten een voor een verwerken.
 
 
 \subsubsection{MQTT: Message Queuing Telemetry Transport}
-MQTT is het protocol dat gebruikt wordt om MQ (Message Queuing) toe te passen in een netwerk.
+MQ en MQTT hebben veel overeenkomsten maar zij verschillen toch van elkaar.
+Hier is het de bedoeling dat de berichten naar een message client verstuurd worden,
+i.p.v. meerdere message clients.
+Dit protocol is heel licht.
+Dus het is geen zwaar process dat veel resources neemt van de server en applicaties.
+MQTT wordt vaak gebruikt bij IOT (Internet of Things).
+Dus het is afhankeljk dat de apparaten met MQTT verbonden zijn binnen hetzelfde netwerk.
 
+MQTT werkt op dezelfde manier als MQ.
+Maar i.p.v. topics maakt MQTT gebruik van channels.
+De message clients kunnen zich dan subscriben (inschrijven) bij zo een kanaal
+om de berichten te ontvangen van een bepaald apparaat.
+Dus gewoonlijk een message producer, message broker
+en een message client.
+Maar bij MQTT wordt de producer de publisher genoemd,
+en de client wordt een subscriber genoemd.
+Een publisher stuurt berichten en een subscriber ontvangt hen op een kanaal.
+Een publish(bericht) kan je naar meerdere subscribers sturen.
+MQTT heeft wel de mogelijkheid om een message queue te maken maar dat hoeft niet.
+
+In MQTT is er een mogelijkheid om QoS (Quality of Service) te hebben.
+Hiermee kan er aangegeven worden welke berichten belangrijk zijn,
+en welke weer niet.
+QoS bestaat uit 3 niveaus:
+\begin{description}
+	\item [QoS-0 (niveau 1):] Het bericht wordt een aantal keer verstuurd en niet opgeslagen.
+		Er wordt ook niet gecontroleerd of het bericht aankomt.
+	\item [QoS-1 (niveau 2):] De publisher stuurt een bericht tenminste 1 keer en verwacht
+		een response van de broker als conformatie dat de broker het bericht naar alle
+		subscribers gestuurd heeft.
+	\item [QoS-2 (niveau 3):] De publisher stuurt maar 1 bericht naar de broker. De broker
+		bevestigd aan de publisher dat het bericht is ontvangen.
+		Daarna stuurt de publisher een bevestiging terug dat hij de bevestiging van de broker
+		ontvangen heeft. 
+\end{description}
+MQTT is niet veilig omdat de gegevens gewoon als plain text verstuurd worden.
 
 %Schrijven hoe MQTT toepasselijk is op de centrale bank
-
+MQTT kan gebruikt worden bij het sturen van de queries naar de centrale bank.
 
 \section{Advies}
 %Wat advieseer je aan de mensen om te doen bij het maken van de bank?
@@ -121,7 +164,7 @@ MQTT is het protocol dat gebruikt wordt om MQ (Message Queuing) toe te passen in
 Als we het hebben over encryptie,
 dan hebben wij het gewoon over het versleutelen van data.
 SSL en Hashing zijn hier goede voorbeelden van.
-
+Hashing is een 
 
 \paragraph{Firewall}
 \paragraph{Arduino beveiliging}
