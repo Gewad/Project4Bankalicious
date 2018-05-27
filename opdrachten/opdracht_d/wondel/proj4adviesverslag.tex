@@ -80,21 +80,48 @@ verstuurd, maar dat je in 1 keer een aantal messages stuurt.
 Dit zorgt voor de efficientie.
 MQ kan ook in verschillende talen worden geschreven.
 
+
+
 %Schrijven over MQ dat toepasselijk is op de centrale bank
+Op dit moment stuurt de client van de lokale bank berichten na mekaar steeds naar de lokale server.
+Er is geen regeling of controle bij het sturen van de berichten.
+Op kleine schaal is dat niet van belang.
+Op een grotere schaal is komt dit wel in conflict met de efficientie van
+de server connectie tussen de centrale bank en de lokale banken.
+De centrale bank is verbonden met tientallen servers van de lokale banken.
+De lokale banken sturen ook constant berichten naar de centrale bank.
+De centrale bank kan dit niet in een keer verwerken.
+Dus om dit probleem op te lossen maken we gebruik van MQ.
+Message Queuing zorgt er voor dat de berichten(met queries voor de database)
+die per client gestuurd worden naar de centrale bank eerst in een lijst worden gedaan
+om in een keer gestuurd te worden naar de centrale bank.
+Dit zorgt ook voor minder data belast.
+De server kan dan gerust per queue de berichten een voor een verwerken.
 
 
 \subsubsection{MQTT: Message Queuing Telemetry Transport}
 MQTT is het protocol dat gebruikt wordt om MQ (Message Queuing) toe te passen in een netwerk.
 
+
 %Schrijven hoe MQTT toepasselijk is op de centrale bank
 
+
 \section{Advies}
+%Wat advieseer je aan de mensen om te doen bij het maken van de bank?
+
 
 \section{Kwaliteitseisen}
+%Welke kwaliteitseisen zijn er gesteld voor je de centrale bank en hoe pak je ze aan?
+
 
 \subsection{Security}
 
 \paragraph{Encryptie}
+Als we het hebben over encryptie,
+dan hebben wij het gewoon over het versleutelen van data.
+SSL en Hashing zijn hier goede voorbeelden van.
+
+
 \paragraph{Firewall}
 \paragraph{Arduino beveiliging}
 
