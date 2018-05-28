@@ -2,10 +2,13 @@
 
 \usepackage[dutch]{babel}
 \usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{marvosym}
+\usepackage{url}
 
 \begin{document}
 
-\title{Advies Centrale Bank}
+\title{Inrichting Centrale Bank}
 \author{Paul Wondel}
 \date{\today}
 \maketitle
@@ -256,32 +259,126 @@ Er moet gebruikt gemaakt worden van QoS-1 om het versturen van efficient en veil
 \clearpage
 \newpage
 
-\section{Kwaliteitseisen}
-%Welke kwaliteitseisen zijn er gesteld voor je de centrale bank en hoe pak je ze aan?
+\subsection{Encryptie}
+Bij het versturen van data hoort er ook altijd beveiliging
+voor het beschermen van gegevens.
+In dit hoofdstuk zal ik wat uitleg geven over
+protocollen die zorgen voor beveiliging van data in het netwerkt.
 
-\subsection{Security}
-
-\paragraph{Encryptie}
 Als we het hebben over encryptie,
 dan hebben wij het gewoon over het versleutelen van data.
 SSL en Hashing zijn hier goede voorbeelden van.
-Hashing is een 
 
-\subparagraph{TLS/SSL}
-\subparagraph{Hashing}
+\paragraph{TLS/SSL}
+TLS en SSL communicatie protocollen die zorgen voor de beveiliging
+van data tussen een server en zijn clients.
+Wanneer dit protocol is toegepast is het heel moeilijk om
+data af te luisteren.
+Er wordt gebruikt gemaakt van een asymetrische sleutel.
+Dit wilt zeggen dat er 2 sleutels zijn om de encrypte data te kunnen lezen.
+De server heeft een en de client heeft er een.
+De twee sleutels samen vormen een symetrische sleutel die dan de data onsleutelt.
+Bij elke server-client connectie is er een andere combinatie van sleutels.
 
-\paragraph{Firewall}
-\paragraph{Arduino beveiliging}
+Voordat een server en een client data kunnen versturen via TLS/SSL connectie,
+moet er eerst een afspraak gamaakt worden voor een encryptie en chifer.
+Een chifer is een algoritme om sleutels aan te maken voor de encryptie
 
-\subsection{Uitbreidbaarheid}
-\subsection{Effectiviteit}
-\subsection{Bruikbaarheid}
+Helaas zijn er wat voorkomende problemen met SSL.
+Er zijn aanval methoden die het makkelijk maken om een beveiligd
+netwerk te ontsleutelen.
+De POODLE aanval is een voorbeeld hiervan.
+De POODLE aanval zorgt ervoor dan er veel aanvragen gestuurt worden
+naar een server of client totdat hij de encryptie van de communicatie
+gekraakt heeft.
+Dit probleem komt ook in de andere versies voor van SSL, namelijk in
+SSL1, SSL2 en SSL3.
+
+TLS is de opvolger van SSL.
+TLS is hetzelfde protocol als SSL maar beter beveiligd.
+Vanaf juni 2015 zijn alle SSL protocollen verboden voor gebruik en
+in plaats daarvan moet er TLS 1.0 of later gebruikt worden.
+
+\paragraph{Hashing}
+Hashing is een methode om data ge-encrypt op te slaan.
+Dit gebeurt d.m.v hash values.
+Een hash (hash value), of message digest,
+is een nummer dat wordt gegenereerd van een stuk tekst (string).
+Dit wordt gedaan door een al bestaand of zelfgeschreven algoritme.
+Het algoritme zorgt ervoor dat dat de kans heel erg klein is dat
+een ander stuk tekst dezelfde hash kan creeren.
+De hash wordt dan in een hash tabel opgeslagen.
+De zender stuurt een bericht en creert dan een hash van het bericht.
+Met de hash beveiligd de zender het bericht.
+Daarna stuurt de zender het bericht met de hash naar een ontvanger.
+De ontvanger op zijn beurt decrypt het bericht en de hash.
+Daarna maakt hij zijn eigen hash van het ontvangen bericht.
+Hiermee vergelijkt hij zijn eigen hash met de ontvangen hash.
+Als de hashes identiek zijn, betekent het dat het bericht veilig is aangekomen
+en niet aangepast is onderweg.
 
 \clearpage
 \newpage
 
 \section{Advies: Inrichting Centrale Bank}
-%Wat advieseer je aan de mensen om te doen bij het maken van de bank?
+In dit hoofdstuk zal ik mijn advies geven over de inrichting van de centrale bank.
+Op elk gebied waarover en een analyse verricht is zal ik advies geven.
+
+\paragraph{Server Communicatie met Encryptie}
+Voor de server communicatie is de meest efficiente manier het opstellen
+van een centrale server.
+Het hebben van een centrale server maakt het werk belast veel minder
+voor de lokale banken.
+Als je een centrale server systeem vergelijkt met het peer to peer model,
+zie je dat het hebben van een centrale server ook beter is.
+Het data verwerken is ook vele keren beter bij de lokale server.
+
+Bij het peer to peer model moet een lokale bank met elke lokale bank in de regio verbinden.
+Als het banksysteem van de nieuwe lokale bank die capaciteit niet heeft,
+lukt het hem niet
+.
+Het verschil in programmeertalen tussen de bank systemen is geen probleem.
+Elke bank kan in zijn eigen taal geschreven zijn en nog steeds data aan elkaar vragen.
+De vertalen op de centrale server zorgt ervoor dat iedereen zijn data kan vragen aan 
+elkander.
+De vertaler is een Java applicatie die zorgt voor het maken van certificaten.
+Alle lokale banken moeten de mogelijkheid van het aanmaken van certificaten toepassen
+in hun bank systemen.
+Op deze manier kan er heel goed en snel gewerkt worden in het data verkeer.
+
+Om het beheer over versturen van berichten efficienter te maken op de centrale server,
+kan er gebruik gemaakt worden van MQTT.
+MQTT zorgt dan voor de verschillende kanalen waar de banken dan aan verbonden zijn.
+MQTT is niet beveiligd uit zichzelf,
+dus daarvoor kan er TLS encryptie toegepast worden.
+Hierdoor is hij heel goed beveiligd.
+
+De databases op de servers worden met hashing versleuteld.
+Dit zorgt ervoor dat als er toch iemand op de servers toegang heeft gekregen
+van buiten, hij de informatie op de server niet kan lezen.
+Alleen de mensen met de juiste authorizatie kunnen dat.
+
+\paragraph{Arduino beveiliging}
+Helaas is het bij de arduino ook mogelijk om data af te luisteren.
+De pincode en het bankpasnummer kan zo makkelijk afgetapt worden
+als er buitenstaander bij de arduino is gekomen.
+Behalve dat de arduino geisolleerd is,
+moet de data die hij verstuurd naar de bank ook versleuteld worden.
+Dit kan opgelost worden door hashing.
+Bij het toepassen van hashing worden de pincode en het bankpasnummer
+van de klant onleesbaar voor buitenstaanders.
+Hierdoor is de data onkraakbaar en hebben ze er niets aan.
+Dit is een veilige manier om data te verzenden tussen
+de arduino en de lokale bank.
+
+\subsection{Uitbreidbaarheid}
+Het aansluiten van nieuwe lokale banken gaat veel makkelijker.
+De nieuwe lokale bank hoeft zich alleen te verbinden met de centrale server,
+en dan is in verbinding met alle banken via de centrale bank.
+Dit systeem van de centrale bank is ook uit te breiden naar andere regio's.
+Er kunnen zelfs meerdere centrale banken opgericht worden.
+Deze kunnen door middel van de certificaten ook gewoon met elkaar verbinden.
+Ook kan er gewoon MQTT met TLS encryptie toegepast worden.
 
 \clearpage
 \newpage
@@ -289,9 +386,93 @@ Hashing is een
 \section{Project Management}
 
 \subsection{Kwaliteitseisen}
+\begin{enumerate}
+	\item \textbf{Security}
+	\begin{enumerate}
+		\item Encryptie is verplicht
+		\begin{itemize}
+			\item De data connectie tussen de lokale servers en de centrale server moeten versleuteld en beveiligd.
+			\item De data connectie tussen de arduino en de lokale server moeten versleuteld zijn.
+			\item Afluisteren van data moet bijna tot onmogelijk zijn.
+		\end{itemize}
+		\item Arduino moet fysiek beveiligd zijn. 
+	\end{enumerate}
+
+	\item \textbf{Uitbreidbaarheid}
+	\begin{enumerate}
+		\item Het systeem moet makkelijk uit te breiden zijn.
+		\item Meer lokale banken moet zich makkelijk erbij kunnen toevoegen.
+	\end{enumerate}
+
+	\item \textbf{Efficiency}
+	\begin{enumerate}
+		\item Het systeem moet het meeste efficiency eruit halen.
+		\item Het systeem moet niet te veel belast zijn voor de lokale banken om mee te werken.
+	\end{enumerate}
+	\item \textbf{Bruikbaarheid}
+	\begin{enumerate}
+		\item Het systeem moet makkelijk te gebruiken zijn voor nieuwe banken
+		\item Het systeem moet toe te passen kunnen zijn in een hele nieuwe regio
+	\end{enumerate}
+\end{enumerate}
+
 \subsection{Code Beheer}
+Bij code beheer wordt op GIT gedaan.
+Hierbij wordt er versie controle toegepast.
+Versie controle wordt gedaan door middel van git branching.
+
+Versiecontrole met git branching werkt als volgt:\\
+Er wordt een originele versie aangemaakt.
+Dit wordt de master brach genoemd in git.
+Van de master branch wordt er een versie gekopieerd die wij de test branch noemen.
+Dit is de test versie van de code.
+Het development team maakt nu van de test versie een eigen versie.
+In git wordt dit hun eigen branch. 
+Elke developer werkt in aan zijn eigen versie (dus in zijn eigen git branch).
+Wanneer een vindt dat hij/zij klaar is met zijn versie,
+stuurt hij dit naar de test branch om de test versie bij te werken.
+Elke developer doet dit op zijn beurt.
+Er wordt een samenkomst gehouden door de developers om te besluiten
+of de test versie geschikt is om te publiceren.
+Als dat besloten is dan wordt de test versie naar
+de master branch gestuurd.
+Op de master branch staat dan de nieuwe master versie.
+
+\begin{figure}[!h]
+        \centering
+        \includegraphics[height=4in]{git.pdf}
+        \caption{GIT FlowWork}
+        \label{fig: git model}
+\end{figure}
+
 \subsection{Issue \& Risico}
+
 \paragraph{Issue Tracking}
+Issue Tracking voor dit project wordt op de GIT bijgehouden.
+Om de issue tracking voor dit project te bekijken,
+ga naar de Git van dit project.
+De issues worden bijgehouden om de problemen tijdens de development
+te noteren en te behandelen.
+Zo kan er ook aan het eind van het project aangegeven worden,
+tegen welke problemen het development team op gelopen heeft.
+Bij de issues worden er opdrachten toegewezen aan leden van de groep.\\
+
+Link:
+
+\MVAt~\href{https://github.com/Gewad/Project4Bankalicious/issues}{Git issues}
+
 \paragraph{Risico Log}
+Het risico log is opgesteld om in het begin aan te geven
+welke risico's op ons te wachten staan.
+De risicos worden in dit logboek opgeschreven.
+Tijdens het bouwen van dit systeem wordt er rekening gehouden met de risico's
+om hen te kunnen verkomen in de eindfase van de development.
+Het risico log wordt ook op GIT bijgehouden.\\
+
+Links:
+
+\MVAt~\href{https://github.com/Gewad/Project4Bankalicious/blob/test/opdrachten/opdracht_h}{Persoonlijk: Risicolog}
+
+\MVAt~\href{https://github.com/Gewad/Project4Bankalicious/blob/test/opdrachten/opdracht_h/opdracht_h_teamonderdeel.xlsx}{Team: Risicolog}
 
 \end{document}
