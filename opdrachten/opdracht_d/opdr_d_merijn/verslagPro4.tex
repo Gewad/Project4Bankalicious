@@ -27,9 +27,6 @@ Voor project 4 moesten wij voor het individuele onderdeel een advies geven over 
 Aan het eind van het eerste deel van het project moet \'e\'en van de adviezen van de studenten worden gekozen en uitgewerkt de rest van de loop van het project.
 Wij moeten tijdens de loop van het project letten op vijf onderdelen: \emph{beheren, analyseren, adviseren ontwerpen en realiseren.}
 
-%TODO bronnen
-%TODO Netwerkdiagram, Dataflow diagram, componenten.
-
 \end{abstract}
 
 \newpage
@@ -46,14 +43,10 @@ Wij hebben een document met kwaliteitseisen voor de groep van de code, bank, ATM
 Deze is op Github terug te vinden.
 Ook individueel heb ik kwaliteitseisen voor de centrale bank opgesteld. \\
 
-
-TODO klopt geen zak van.
-
-
 \vspace{1mm}
-\Mundus~\url{github.com/Gewad/Project4Bankalicious/tree/master/kwaliteitseisen/teamdeel}
+\Mundus~\href{https://github.com/Gewad/Project4Bankalicious/blob/test/eisenlijstje.pdf}{Kwaliteitseisen team}
 
-\Mundus~\url{github.com/Gewad/Project4Bankalicious/tree/master/kwaliteitseisen/teamdeel}
+\Mundus~\href{https://github.com/Gewad/Project4Bankalicious/blob/merijn-branch/opdrachten/kwaliteitseisen/merijn/*.pdf}{Kwaliteitseisen individueel}
 
 \subsection{Beheer}
 
@@ -74,21 +67,23 @@ All mijn en de groep's documentatie is terug te vinden op Github.
 \paragraph{Risico's en issue's}
 
 Ik heb aan het begin van het project een risicolog opgesteld en door de loop van het project bijgehouden.
-Deze is op de Gitpagina te vinden, en op mijn website.
+Deze is op de Gitpagina te vinden, en op mijn website. \\
 
+\vspace{1mm}
 
-TODO linkjes zien er kut uit.
+\Mundus~\href{https://github.com/Gewad/Project4Bankalicious/blob/test/opdrachten/opdracht_h/opdracht_h_merijn/opdracht_h.pdf}{Risicolog persoonlijk}
 
-
-\href{https://github.com/Gewad/Project4Bankalicious/blob/test/opdrachten/opdracht_h/opdracht_h_merijn/opdracht_h.pdf}{Risicolog}
+\Mundus~\href{https://github.com/Gewad/Project4Bankalicious/blob/test/opdrachten/opdracht_h/opdracht_h_teamonderdeel.xlsx}{Risicolog team}
 
 \paragraph{Issue tracking}
 
 Op git houden wij individuele en persoonlijke issues bij.
 Wij hebben hier een template voor gekregen, maar Git heeft dezelfde en meer mogelijkheden, en is overzichtelijker.
-Bij de issues staan ook dingen die nog moeten gebeuren, 
+Bij de issues staan ook dingen die nog moeten gebeuren. \\ 
 
-\href{https://github.com/Gewad/Project4Bankalicious/issues}{Git issues}
+\vspace{1mm}
+
+\Mundus~\href{https://github.com/Gewad/Project4Bankalicious/issues}{Git issues}
 
 \newpage
 
@@ -108,34 +103,47 @@ Ook is dit systeem schaalbaar, je zou namelijk makkelijk nog een server op een a
 De servers moeten de database gegevens met elkaar syncronizeren.
 Elke update van een database zou via een query moeten doorgestuurd naar de andere database.
 
+\begin{figure}[!h]
+        \centering
+        \includegraphics[height=0.4in]{meerdere_servers.pdf}
+        \caption{Meerdere servers}
+        \label{fig: meerdere servers}
+\end{figure}
+
 \subsubsection{Centrale server}
 
 Dit is het makkelijkste systeem.
 Je hoeft namelijk maar \'e\'en server op te zetten.
-De centrale bank zal communiseren met allen lokale ATM's.
+De centrale bank zal communiseren met alle lokale ATM's.
 De ATM's zullen om data vragen, en de server zal hierop reageren.
-Ik wil alleen linux server van school wil gaan gebruiken, en het is dus niet praktich om twee servers op een lokatie voor stroom te hebben.
+Ik wil alleen linux server van school wil gaan gebruiken, en het is dus niet praktich om twee servers op \'e\'en lokatie voor stroom te hebben.
 Wel is het handig om een backup van de database te hebben op de server.
 Ik stel voor om elk uur de database te encrypten, en in een aparte directory op te slaan.
 
-TODO dataflow diagram.
+\begin{figure}[!h]
+        \centering
+        \includegraphics[height=0.4in]{centrale_server.pdf}
+        \caption{Centrale server}
+        \label{fig: centrale server}
+\end{figure}
 
-\subsection{protocol}
+\newpage
+
+\subsection{Protocol}
 
 Er moet een protocol zijn om netjes op volgorde (met een queue), en programeertaalonhafhanelijk data te versturen over het netwerk.
 Wij hebben over twee protocollen les gehad van docenten, en ik zal een van deze twee kiezen in mijn advies.
 
 \subsubsection{MQ}
 
-Message qeueing werkt met een \emph{comsumer} een een \emph{producer}.
-De producer zal eerst een qeue aan berichten maken, die de zogenaamde \emph{message broker} bijhoudt.
-Als de producer klaar is met zijn lijst van berichten, ofwel batch genoemd, zal de broker deze, een \emph{topic} geven en naar de consumer sturen.
+Message queueing werkt met een \emph{comsumer} een een \emph{producer}.
+De producer zal eerst een queue aan berichten maken, die de zogenaamde \emph{message broker} bijhoudt.
+Als de producer klaar is met zijn lijst van berichten, ofwel batch genoemd, zal de broker deze een \emph{topic} geven en naar de consumer sturen.
 Als echter tien ATM's allenmaal een batch tegelijk naar de server sturen, zal de server misschien niet snel genoeg zijn om dit in een keer te verwerken.
 Ook is het niet nodig om met een batch te werken, omdat je niet heel veel data in een keer hoeft te sturen.
 Als een ATM 100 euro opvraagt, dan is dat maar een message.
 De enige keer dat dit prachtish is, is bij het versturen van de pincode en de RFID code tegelijkertijd.
 Maar dit zou ook in twee messages gedaan kunnen worden.
-
 Daarom raadt ik dit protocol niet aan.
 
 \subsubsection{MQTT}
@@ -146,18 +154,18 @@ Het werkt inplaats van met batches met subsriptions.
 De publisher stuur berichten naar de server, en de subsribers kiezen wat ze hier mee doen.
 De subscriber kan uit drie opties kiezen.
 Deze niveaus heten \emph{Quality of Service}.
+Ik raadt dit protocol aan omdat het lichter is dan MQ, zodat de server niet overbelast raakt.
+Voor het bank project hebben wij QoS-2 nodig, omdat je anders per ongeluk bijvoorbeeld twee keer hetzelfde bedrag kan afschrijven.
 
 \begin{description}
-\item [QoS-0:] TODO
-\item [QoS-1:]
-\item [QoS-2:]
+\item [QoS-0:] Een keer sturen, en niet kijken of het bericht is aangekomen.
+\item [QoS-1:] Minstens een keer sturen, en kijken of het bericht is aangekomen.
+\item [QoS-2:] Een keer sturen, en een keer ontvangen.
 \end{description}
 
-Ik raadt dit protocol aan omdat het lichter is dan MQ.
-
-\section{Encription}
-
 \newpage
+
+\section{Encryption}
 
 \subsection{Analyze en advies beveiliging netwerk} 
 
@@ -174,13 +182,19 @@ Zo kan bijvoorbeeld zonder protocol de verbinding niet alleen worden afgeluister
 
 SSL en TLS zijn protocollen voor de communicatie security tussen de client en server.
 Als dit protocol gebruikt wordt is het communicatieverkeer niet zo maar af te luisteren.
-Er is echter een groot probleem met SSL: de zogenoemde POODLE attack.
-Deze attack komt er op neer dan als een aanvaller genoeg request stuurt naar een router, hij de encryption kan kraken.
-Deze problemen komen voor in SSL1, SSL2, en SSL3.
+Er is echter grote problemen met SSL, er zijn veel aanvallen die je makkelijk of een versluiteld netwerk kunt uitvoeren, zoals de een POODLE attack.
+Deze attack komt er op neer dan als een aanvaller genoeg request stuurt naar de server of de client, hij de encryption kan kraken.
+Dit probleem komt voor in SSL1, SSL2, en SSL3.
+
 Ook in TLS, die opvolger van SSL, zijn in oude versies al kwetsbaarheden gevonden om de encryptie te kraken.
+SSL en TLS zijn protocollen voor de communicatie security tussen de client en server.
+Als dit protocol gebruikt wordt is het communicatieverkeer niet zo maar af te luisteren.
+
 Sinds juni 2018 zijn alle SSL protocollen verboden te gebruiken voor organizaties that vallen onder het PCI DSS (Payment Card Industry Data Security Standard).
 Nieuwe versies zoals TLS 1.1 en TLS 1.2 mogen nog wel hiervoor worden gebruikt.
 Ik raad aan om ons banksysteem ook aan deze regelgeving te houden, en TLS 1.2 te gebruiken.
+
+\newpage
 
 \subsection{Analyze en advies beveiliging lokale opslag} 
 
@@ -222,9 +236,10 @@ Het zou voor een schoolprojectje goed genoeg zijn, sinds zelfs grote bedrijven d
 Naast de hele database te versleutelen kan je ook de individuele pincodes and RFID codes hashen.
 Het verschil tussen een hash en een ge\:encrypte string is dat je een hash niet terug kunt zetten naar het origineel met een key. 
 Een hash kan je wel zelf terugrekenen.
-Het moet dus een langzame hashinging methode zijn omdat je anders als hacker snel wachtwoorden zou kunnen raden.
+Naast de hele database te versleutelen kan je ook de individuele pincodes and RFID codes hashen.
+Het moet een langzame hashinging methode zijn omdat je anders als hacker snel wachtwoorden zou kunnen raden.
 Goede hashing aloritmes hiervoor zouden kunnen zijn: \emph{scrypt, bcrypt of PBKDF2}.
-Md5 is hier bijvoorbeeld niet voor geschikt omdat hier hashes snel te berekenen zijn.
+Md5 is hier bijvoorbeeld niet voor geschikt omdat het erg snel is.
 Het moment dat de gebruiker bijvoorbeeld een pincode invoert, zal deze gehashed worden.
 Zodra deze bij de database aankomt zullen de hashes worden vergeleken.
 Dit is veiliger dan de hele database te encrypten, omdat de gegevens niet meer geunencrypt hoeven te worden.
@@ -264,7 +279,7 @@ Als de server een command terug stuurt, zal simpelweg het command encrypten, en 
 
 \hfill
 
-\centerline{\textbf{Arduino to server} \ce{pin ->[\textbf{Arduino}\ encrytion] encrypted ->[Session Hash] hashed ->[\textbf{Server}\ decryption]}}
+\centerline{\textbf{Arduino to server} \ce{pin ->[\textbf{Arduino}\ encrytion] encrypted ->[Session hash] hashed ->[\textbf{Server}\ decryption]}}
 
 \vspace{1cm}
 
@@ -272,12 +287,7 @@ Als de server een command terug stuurt, zal simpelweg het command encrypten, en 
 
 \vspace{1cm}
 
-\centerline{\textbf{Terug naar de Arduino} \ce{TODO}}
-%\newpage
-%
-%\section{Conclusie}
-%
-%Dit en dat moet gebeuren.
+\centerline{\textbf{Saldo naar Arduino} \ce{Saldo ->[\textbf{server}\ encryption] string ->[Session hash] hashed ->[\textbf{Arduino} decryption]}}
 
 \end{document}
 

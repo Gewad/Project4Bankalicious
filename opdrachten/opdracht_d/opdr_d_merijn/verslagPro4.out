@@ -5,10 +5,10 @@
 \BOOKMARK [2][-]{subsection.2.1}{Server of servers?}{section.2}% 5
 \BOOKMARK [3][-]{subsubsection.2.1.1}{Verbonden servers}{subsection.2.1}% 6
 \BOOKMARK [3][-]{subsubsection.2.1.2}{Centrale server}{subsection.2.1}% 7
-\BOOKMARK [2][-]{subsection.2.2}{protocol}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.2}{Protocol}{section.2}% 8
 \BOOKMARK [3][-]{subsubsection.2.2.1}{MQ}{subsection.2.2}% 9
 \BOOKMARK [3][-]{subsubsection.2.2.2}{MQTT}{subsection.2.2}% 10
-\BOOKMARK [1][-]{section.3}{Encription}{}% 11
+\BOOKMARK [1][-]{section.3}{Encryption}{}% 11
 \BOOKMARK [2][-]{subsection.3.1}{Analyze en advies beveiliging netwerk}{section.3}% 12
 \BOOKMARK [3][-]{subsubsection.3.1.1}{Problemen geen netwerk encryption}{subsection.3.1}% 13
 \BOOKMARK [3][-]{subsubsection.3.1.2}{SSL tot TLS}{subsection.3.1}% 14
