@@ -14,6 +14,8 @@
 In opdracht voor project 4 heb ik dit verslag opgesteld.
 In dit verslag worden er de kwaliteitseisen en functionaliteitseisen
 beschreven voor de inrichting van de Centrale Bank.
+De vraag die gesteld wordt is: "Hoe richt ik efficient een centrale bank op?".
+In dit verslag wordt er antwoord gegeven op deze vraag.
 \end{abstract}
 
 \clearpage
@@ -24,25 +26,118 @@ beschreven voor de inrichting van de Centrale Bank.
 \clearpage
 \newpage
 
-\section{Centrale Bank}
-\includegraphics{centralserver.png}
-De Centrale Bank kan fungeren als een zogenaamd tussenpersoon.
-De Centrale Bank is verbonden met alle lokale banken.
-Als een lokale bank informatie nodig heeft van een andere lokale bank,
-kan hij de gegevens opvragen aan de centrale bank.
-De centrale bank vervolgens vraagt aan de andere lokale bank.
-En die stuurt de gegevens naar de centrale bank waardoor de centrale bank
-de gegevens terug kan sturen de lokale bank die de gegevens had aangevraagd.\\
+\section{Analyse: Inrichting Centrale Bank}
+\vspace{6mm}
+\subsection{Server Communicatie}
+\begin{figure}[h]
+\includegraphics[height=6cm, width=8cm]{centralserver.png}
+\centering
+\end{figure}
 
+\paragraph{Centrale Server}
+De Centrale Bank zal fungeren als een zogenaamd tussenpersoon.
+De Centrale Bank is verbonden met alle lokale banken.
+Als een lokale bank data nodig heeft van een andere lokale bank,
+kan hij de gegevens opvragen door een aanvraag naar de centrale bank te sturen.
+De centrale bank vervolgens stuurt de aanvraag naar de geadresseerde lokale bank.
+Die stuurt, op zijn beurt, de gegevens naar de centrale bank waardoor de centrale bank
+de gegevens terug kan sturen de lokale bank die de gegevens had aangevraagd.
+Het sturen van data duurt wel iets langer dan peer to peer netwerken,
+maar het verwerken van de data is veel efficienter bij de lokale banken.
+Dit vanwege het feit dat het meeste werk belast valt bij de centrale server.
+Bij het gebruikerseinde is dit veel fijner om te zien,
+want dan zijn de ATMs niet te langzaam bij het tonen van informatie.
+
+Deze gang van zaken vindt plaats d.m.v. servers.
 Elke lokale bank heeft een database waarin alle gegevens van hun klanten in staan.
 Deze databases staan op een server van de lokale bank (dus een lokale server).
+De servers van de lokale banken zullen verbonden zijn aan een centrale server
+van de centrale bank.
+De databases zijn SQL-type databases.
+Om data uit de databases te halen moeten er query commandos verstuurd worden.
+Door middel van Message queuing of MQTT kunnen er een aantal queries tegelijk verstuurd worden.
+De connectie tussen de lokale server en de centrale server moeten wel beveiligd zijn.
+Hiervoor kunnen er protocollen toegepast worden, namelijk TLS (nu SSL).
+SSL zorgt ervoor dat de data die verstuurd wordt over deze connectie beveiligd is
+d.m.v. encryptie.
+De encryptie maakt de data onleesbaar voor externe afluisteraars.
+Door het gebruik van een centrale server is er geen probleem in welke
+programmeer taal de clients van de lokale banken geschreven zijn.
+De applicatie die draait op de centrale server vertaald de quaries
+die de lokale banken sturen en stelt dan zijn eigen query op voor
+waarmee hij dan een aanvraag aan maakt.
+Dit wordt dan gedaan d.m.v. certificaten. 
 
-\section{Server Communicatie}
+Mocht er een nieuwe lokale bank ontstaan die wenst mee te doen aan dit systeem,
+dan is het helemaal niet moeilijk om hem aan te sluiten aan het netwerk.
+Zijn programmeertaal is niet van belang omdat de server alle talen aankan.
+Ook is het makkelijker omdat de nieuwe lokale bank alleen verbonden
+hoeft te zijn aan de centrale server.
+Via de centrale server kan hij in contact komen met de andere lokale banken.
 
+\vspace{5mm}
 
-\subsection{Sockets}
+\begin{figure}[h]
+\includegraphics[height=6cm, width=8cm]{centralserver.png}
+\centering
+\end{figure}
 
-\subsubsection{Java Applicatie}
+\paragraph{Peer-to-Peer Network}
+Een peer to peer netwerk is een netwerk waarbij verschillende servers met
+elkaar verbonden zijn.
+In het figuur hierboven is een schets van het netwerk model gemaakt.
+In dit model zijn alle lokale banken met elkaar verbonden.
+Als een lokale bank data nodig heeft van een andere bank,
+dan stuurt hij een aanvraag rechtstreeks naar de lokale bank
+waarvan hij data nodig heeft.
+De andere lokale bank stuurt dat gewoon de data naar de lokale bank
+die de aanvraag verstuurd heeft.
+Met het peer to peer netwerk gaat het versturen van data veel sneller
+dan data versturen via een centrale server.
+
+In dit model horen alle lokale banken wel in dezelfde programmeertaal geschreven te worden.
+Dit is om te voorkomen dat de aanvragen die verstuurd worden onleesbaar zijn.
+Dus het versturen van data gaat vrij snel omdat er geen vertaling plaats hoeft te vinden
+Het verwerken van data is ook langzamer aan het gebruikerseinde dan bij
+het gebruik van een centrale server.
+De lokale banken zijn verbonden met alle lokale banken in de regio.
+Dit brengt veel werk belast met zich mee.
+Omdat de banken een constante connectie moeten openhouden met elkaar.
+Hiervoor moeten er veel resources gebruikt worden om dit stand te houden.
+Hiernaast hoort hij constant data te verwerken om aan de eindgebruiker te tonen.
+Al dit werkbelast maakt het gebruik bij de ATM niet prettig voor de klant.
+De klant zal langer moeten wachten om de gegevens tevoorschijnt te krijgen.
+
+Bij deze connectie hoort er ook encryptie te zijn.
+De encryptie zal hier helaas per connectie moeten geschieden.
+Als er bijvoorbeeld 50 banken in de regio zijn,
+zal elke bank 49 connecties open hebben staan.
+Alle 49 connecties horen dan ook met ge-encrypt te zijn met b.v. SSL/TLS.
+Dit neemt dan ook veel resources van de bank.
+
+\subsection{Certificaten}
+Certificaten gebruiken bij het aanvragen van data is een goede manier
+om data te versturen tussen verschillende clients in verschillende programmeertalen.
+Een certificaat is data opsturen in een bepaald formaat om bepaald data uit het
+database te krijgen.
+De centrale server vertaald dit certificaat in SQL queries en stuurt die dan naar
+de databases.
+De databases sturen dan de data op naar de centrale bank.
+De centrale bank stuurt dan de data weer in een certificaat formaat
+zodat de lokale bank de gegevens kan lezen.
+Het cerficiaat kan b.v. bestaan uit een bankpasnummer en een pincode.
+Bij het inloggen bij een bank wordt de cerficitaat opgestuurd naar de centrale bank.
+Na het verwerken van de data met het database,
+geeft de centrale bank een response.
+Aan de hand van het response kan de lokale bank verder gaan met het
+verwerken van de data die hij ontvangen heeft.
+
+De certificalen worden op de centrale server gemaakt en vertaald door een applicatie.
+Deze applicatie is in Java geschreven.
+Deze applicatie vertaald de certificaten in SQL queries en stuurt de data,
+verkregen het database, terug naar de lokale banken.
+De banken moet er voor zorgen dat er in hun eigensysteem het sturen en
+verwerken van certificaten mogelijk is.
 
 \subsection{Message Protocols}
 
@@ -109,7 +204,6 @@ om in een keer gestuurd te worden naar de centrale bank.
 Dit zorgt ook voor minder data belast.
 De server kan dan gerust per queue de berichten een voor een verwerken.
 
-
 \subsubsection{MQTT: Message Queuing Telemetry Transport}
 MQ en MQTT hebben veel overeenkomsten maar zij verschillen toch van elkaar.
 Hier is het de bedoeling dat de berichten naar een message client verstuurd worden,
@@ -146,18 +240,24 @@ QoS bestaat uit 3 niveaus:
 		Daarna stuurt de publisher een bevestiging terug dat hij de bevestiging van de broker
 		ontvangen heeft. 
 \end{description}
-MQTT is niet veilig omdat de gegevens gewoon als plain text verstuurd worden.
+Helaas is MQTT is niet veilig omdat de gegevens gewoon als plain text verstuurd worden.
+Hiervoor is SSL/TLS geschikt om toe te passen.
 
 \paragraph{Toepasselijkheid op de Centrale Bank}
-MQTT kan gebruikt worden bij het sturen van de queries naar de centrale bank.
+MQTT kan gebruikt worden bij het sturen van de certificaten naar de centrale bank.
+Elke bank kan op een appart kanaal ge-subscribed zijn.
+Hierdoor is het ook te voorkomen dat er berichten verloren gaan.
+De kanalen zorgen voor de zekerheid dat de berichten tussen de lokale en centrale bank
+worden ontvangen.
+Als er veel lokale banken verbonden zijn aan de centrale bank,
+dan is het handig om gebruik te maken van MQTT.
+Er moet gebruikt gemaakt worden van QoS-1 om het versturen van efficient en veilig te maken.
 
-\section{Advies}
-%Wat advieseer je aan de mensen om te doen bij het maken van de bank?
-
+\clearpage
+\newpage
 
 \section{Kwaliteitseisen}
 %Welke kwaliteitseisen zijn er gesteld voor je de centrale bank en hoe pak je ze aan?
-
 
 \subsection{Security}
 
@@ -167,12 +267,31 @@ dan hebben wij het gewoon over het versleutelen van data.
 SSL en Hashing zijn hier goede voorbeelden van.
 Hashing is een 
 
+\subparagraph{TLS/SSL}
+\subparagraph{Hashing}
+
 \paragraph{Firewall}
 \paragraph{Arduino beveiliging}
 
+\subsection{Uitbreidbaarheid}
 \subsection{Effectiviteit}
+\subsection{Bruikbaarheid}
 
+\clearpage
+\newpage
 
+\section{Advies: Inrichting Centrale Bank}
+%Wat advieseer je aan de mensen om te doen bij het maken van de bank?
 
+\clearpage
+\newpage
+
+\section{Project Management}
+
+\subsection{Kwaliteitseisen}
+\subsection{Code Beheer}
+\subsection{Issue \& Risico}
+\paragraph{Issue Tracking}
+\paragraph{Risico Log}
 
 \end{document}

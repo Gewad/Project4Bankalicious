@@ -1,17 +1,28 @@
 \babel@toc {dutch}{}
-\contentsline {section}{\numberline {1}Centrale Bank}{3}
-\contentsline {section}{\numberline {2}Server Communicatie}{4}
-\contentsline {subsection}{\numberline {2.1}Sockets}{4}
-\contentsline {subsubsection}{\numberline {2.1.1}Java Applicatie}{4}
-\contentsline {subsection}{\numberline {2.2}Message Protocols}{4}
-\contentsline {subsubsection}{\numberline {2.2.1}MQ: Message Queuing}{4}
-\contentsline {paragraph}{Toepasselijkheid op de Centrale Bank}{5}
-\contentsline {subsubsection}{\numberline {2.2.2}MQTT: Message Queuing Telemetry Transport}{5}
+\contentsline {section}{\numberline {1}Analyse: Inrichting Centrale Bank}{3}
+\contentsline {subsection}{\numberline {1.1}Server Communicatie}{3}
+\contentsline {paragraph}{Centrale Server}{3}
+\contentsline {paragraph}{Peer-to-Peer Network}{4}
+\contentsline {subsection}{\numberline {1.2}Certificaten}{5}
+\contentsline {subsection}{\numberline {1.3}Message Protocols}{5}
+\contentsline {subsubsection}{\numberline {1.3.1}MQ: Message Queuing}{5}
 \contentsline {paragraph}{Toepasselijkheid op de Centrale Bank}{6}
-\contentsline {section}{\numberline {3}Advies}{6}
-\contentsline {section}{\numberline {4}Kwaliteitseisen}{6}
-\contentsline {subsection}{\numberline {4.1}Security}{6}
-\contentsline {paragraph}{Encryptie}{6}
-\contentsline {paragraph}{Firewall}{6}
-\contentsline {paragraph}{Arduino beveiliging}{6}
-\contentsline {subsection}{\numberline {4.2}Effectiviteit}{6}
+\contentsline {subsubsection}{\numberline {1.3.2}MQTT: Message Queuing Telemetry Transport}{6}
+\contentsline {paragraph}{Toepasselijkheid op de Centrale Bank}{7}
+\contentsline {section}{\numberline {2}Kwaliteitseisen}{8}
+\contentsline {subsection}{\numberline {2.1}Security}{8}
+\contentsline {paragraph}{Encryptie}{8}
+\contentsline {subparagraph}{TLS/SSL}{8}
+\contentsline {subparagraph}{Hashing}{8}
+\contentsline {paragraph}{Firewall}{8}
+\contentsline {paragraph}{Arduino beveiliging}{8}
+\contentsline {subsection}{\numberline {2.2}Uitbreidbaarheid}{8}
+\contentsline {subsection}{\numberline {2.3}Effectiviteit}{8}
+\contentsline {subsection}{\numberline {2.4}Bruikbaarheid}{8}
+\contentsline {section}{\numberline {3}Advies: Inrichting Centrale Bank}{9}
+\contentsline {section}{\numberline {4}Project Management}{10}
+\contentsline {subsection}{\numberline {4.1}Kwaliteitseisen}{10}
+\contentsline {subsection}{\numberline {4.2}Code Beheer}{10}
+\contentsline {subsection}{\numberline {4.3}Issue \& Risico}{10}
+\contentsline {paragraph}{Issue Tracking}{10}
+\contentsline {paragraph}{Risico Log}{10}
