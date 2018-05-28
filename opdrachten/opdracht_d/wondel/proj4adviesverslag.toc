@@ -1,14 +1,17 @@
 \babel@toc {dutch}{}
 \contentsline {section}{\numberline {1}Centrale Bank}{3}
-\contentsline {section}{\numberline {2}Server Communicatie}{3}
-\contentsline {subsection}{\numberline {2.1}Sockets}{3}
-\contentsline {subsubsection}{\numberline {2.1.1}Java Applicatie}{3}
-\contentsline {subsection}{\numberline {2.2}Message Protocols}{3}
-\contentsline {subsubsection}{\numberline {2.2.1}MQ: Message Queuing}{3}
-\contentsline {subsubsection}{\numberline {2.2.2}MQTT: Message Queuing Telemetry Transport}{4}
-\contentsline {section}{\numberline {3}Advies}{5}
-\contentsline {section}{\numberline {4}Kwaliteitseisen}{5}
-\contentsline {subsection}{\numberline {4.1}Security}{5}
-\contentsline {paragraph}{Encryptie}{5}
-\contentsline {paragraph}{Firewall}{5}
-\contentsline {paragraph}{Arduino beveiliging}{5}
+\contentsline {section}{\numberline {2}Server Communicatie}{4}
+\contentsline {subsection}{\numberline {2.1}Sockets}{4}
+\contentsline {subsubsection}{\numberline {2.1.1}Java Applicatie}{4}
+\contentsline {subsection}{\numberline {2.2}Message Protocols}{4}
+\contentsline {subsubsection}{\numberline {2.2.1}MQ: Message Queuing}{4}
+\contentsline {paragraph}{Toepasselijkheid op de Centrale Bank}{5}
+\contentsline {subsubsection}{\numberline {2.2.2}MQTT: Message Queuing Telemetry Transport}{5}
+\contentsline {paragraph}{Toepasselijkheid op de Centrale Bank}{6}
+\contentsline {section}{\numberline {3}Advies}{6}
+\contentsline {section}{\numberline {4}Kwaliteitseisen}{6}
+\contentsline {subsection}{\numberline {4.1}Security}{6}
+\contentsline {paragraph}{Encryptie}{6}
+\contentsline {paragraph}{Firewall}{6}
+\contentsline {paragraph}{Arduino beveiliging}{6}
+\contentsline {subsection}{\numberline {4.2}Effectiviteit}{6}

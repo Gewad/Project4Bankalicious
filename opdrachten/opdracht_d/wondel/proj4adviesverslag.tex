@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage[dutch]{babel}
+\usepackage{graphicx}
 
 \begin{document}
 
@@ -16,12 +17,15 @@ beschreven voor de inrichting van de Centrale Bank.
 \end{abstract}
 
 \clearpage
+\newpage
 
 \tableofcontents
 
 \clearpage
+\newpage
 
 \section{Centrale Bank}
+\includegraphics{centralserver.png}
 De Centrale Bank kan fungeren als een zogenaamd tussenpersoon.
 De Centrale Bank is verbonden met alle lokale banken.
 Als een lokale bank informatie nodig heeft van een andere lokale bank,
@@ -32,7 +36,6 @@ de gegevens terug kan sturen de lokale bank die de gegevens had aangevraagd.\\
 
 Elke lokale bank heeft een database waarin alle gegevens van hun klanten in staan.
 Deze databases staan op een server van de lokale bank (dus een lokale server).
-
 
 \section{Server Communicatie}
 
@@ -88,11 +91,9 @@ MQ heeft ook een aantal nadelen.
 Bij MQ weet de message producer niet wie zijn clienten zijn.
 Dus de message broker stuurt gewoon de message queue naar alle verbonden apparaten.
 Een message client moet verbonden zijn om een bericht te kunnen ontvangen
-anders wordt hij niet naar hem toegestuurd.
+anders wordt hij niet naar hem toegestuurd. \\
 
-
-
-%Schrijven over MQ dat toepasselijk is op de centrale bank
+\paragraph{Toepasselijkheid op de Centrale Bank}
 Op dit moment stuurt de client van de lokale bank berichten na mekaar steeds naar de lokale server.
 Er is geen regeling of controle bij het sturen van de berichten.
 Op kleine schaal is dat niet van belang.
@@ -147,7 +148,7 @@ QoS bestaat uit 3 niveaus:
 \end{description}
 MQTT is niet veilig omdat de gegevens gewoon als plain text verstuurd worden.
 
-%Schrijven hoe MQTT toepasselijk is op de centrale bank
+\paragraph{Toepasselijkheid op de Centrale Bank}
 MQTT kan gebruikt worden bij het sturen van de queries naar de centrale bank.
 
 \section{Advies}
@@ -169,6 +170,7 @@ Hashing is een
 \paragraph{Firewall}
 \paragraph{Arduino beveiliging}
 
+\subsection{Effectiviteit}
 
 
 
