@@ -8,15 +8,15 @@
 \contentsline {subsection}{\numberline {2.1}Server of servers?}{4}{subsection.2.1}
 \contentsline {subsubsection}{\numberline {2.1.1}Verbonden servers}{4}{subsubsection.2.1.1}
 \contentsline {subsubsection}{\numberline {2.1.2}Centrale server}{4}{subsubsection.2.1.2}
-\contentsline {subsection}{\numberline {2.2}protocol}{4}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}MQ}{4}{subsubsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2}Protocol}{5}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}MQ}{5}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}MQTT}{5}{subsubsection.2.2.2}
-\contentsline {section}{\numberline {3}Encription}{5}{section.3}
+\contentsline {section}{\numberline {3}Encryption}{6}{section.3}
 \contentsline {subsection}{\numberline {3.1}Analyze en advies beveiliging netwerk}{6}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Problemen geen netwerk encryption}{6}{subsubsection.3.1.1}
 \contentsline {subsubsection}{\numberline {3.1.2}SSL tot TLS}{6}{subsubsection.3.1.2}
-\contentsline {subsection}{\numberline {3.2}Analyze en advies beveiliging lokale opslag}{6}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Plain text}{6}{subsubsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2}Analyze en advies beveiliging lokale opslag}{7}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Plain text}{7}{subsubsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2}Encrypt de hele database}{7}{subsubsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.3}Hashing}{8}{subsubsection.3.2.3}
 \contentsline {subsubsection}{\numberline {3.2.4}Hashing and Salting}{9}{subsubsection.3.2.4}
