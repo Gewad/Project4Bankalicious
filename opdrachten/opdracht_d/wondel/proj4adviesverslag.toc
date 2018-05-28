@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {1}Analyse: Inrichting Centrale Bank}{3}{section.1}
 \contentsline {subsection}{\numberline {1.1}Server Communicatie}{3}{subsection.1.1}
 \contentsline {paragraph}{Centrale Server}{3}{section*.2}
-\contentsline {paragraph}{Peer-to-Peer Network}{4}{section*.3}
+\contentsline {paragraph}{Peer-to-Peer Netwerk}{4}{section*.3}
 \contentsline {subsection}{\numberline {1.2}Certificaten}{5}{subsection.1.2}
 \contentsline {subsection}{\numberline {1.3}Message Protocols}{5}{subsection.1.3}
 \contentsline {subsubsection}{\numberline {1.3.1}MQ: Message Queuing}{5}{subsubsection.1.3.1}
