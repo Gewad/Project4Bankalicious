@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.5.19)  29 MAY 2018 01:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.5.19)  30 MAY 2018 00:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -472,13 +472,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 465--471
  []
 
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 476.
+(babel)             in language  on input line 474.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 476.
+(babel)             in language  on input line 474.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 476.
+(babel)             in language  on input line 474.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 476.
+(babel)             in language  on input line 474.
 [12 <./git.pdf
 
 pdfTeX warning: pdflatex (file ./git.pdf): PDF inclusion: invalid other resourc
@@ -518,7 +518,7 @@ r12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/marvosym/marvosym.pfb>
-Output written on proj4adviesverslag.pdf (13 pages, 450676 bytes).
+Output written on proj4adviesverslag.pdf (13 pages, 450684 bytes).
 PDF statistics:
  217 PDF objects out of 1000 (max. 8388607)
  186 compressed objects within 2 object streams
