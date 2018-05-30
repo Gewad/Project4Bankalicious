@@ -1,0 +1,29 @@
+Bytegroep 8:
+Certificaten:
+kan je verschillende opties doorgeven, je moet dan bepaalde parameters opsturen
+client heeft een thread dat verbindt met een socket
+(Socket Methode)
+
+bytegroep 9:
+Gelijk van de client naar de database
+Dus nog geen tussen communicatie applicatie
+Eigen protocol geschreven door Wouter Burgeman (Later vrage)
+
+Bytegroep 4:
+Direct naar de database
+van plan tcp sockets te gebruiken met een applicatie
+
+Bytegroep 7:
+Bastiaan's protocol zelf geschreven
+Lijkt op die van Wouter
+
+Bytegroep 5:
+Direct naar de database
+Wilt wel sockets gebruiken met applicatie
+
+Bytegroep 6:
+Sockets
+
+We hebben gehoord dat we een code aangeleverd krijgen van
+het docenten team. Maar het is nog niet bevestigd.
+Behoud dit ten goede.
