@@ -1,14 +1,24 @@
 \babel@toc {dutch}{}
-\contentsline {section}{\numberline {1}Centrale Bank}{3}
-\contentsline {section}{\numberline {2}Server Communicatie}{3}
-\contentsline {subsection}{\numberline {2.1}Sockets}{3}
-\contentsline {subsubsection}{\numberline {2.1.1}Java Applicatie}{3}
-\contentsline {subsection}{\numberline {2.2}Message Protocols}{3}
-\contentsline {subsubsection}{\numberline {2.2.1}MQ: Message Queuing}{3}
-\contentsline {subsubsection}{\numberline {2.2.2}MQTT: Message Queuing Telemetry Transport}{4}
-\contentsline {section}{\numberline {3}Advies}{5}
-\contentsline {section}{\numberline {4}Kwaliteitseisen}{5}
-\contentsline {subsection}{\numberline {4.1}Security}{5}
-\contentsline {paragraph}{Encryptie}{5}
-\contentsline {paragraph}{Firewall}{5}
-\contentsline {paragraph}{Arduino beveiliging}{5}
+\contentsline {section}{\numberline {1}Analyse: Inrichting Centrale Bank}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Server Communicatie}{3}{subsection.1.1}
+\contentsline {paragraph}{Centrale Server}{3}{section*.2}
+\contentsline {paragraph}{Peer-to-Peer Netwerk}{4}{section*.3}
+\contentsline {subsection}{\numberline {1.2}Certificaten}{5}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Message Protocols}{5}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}MQ: Message Queuing}{5}{subsubsection.1.3.1}
+\contentsline {paragraph}{Toepasselijkheid op de Centrale Bank}{6}{section*.4}
+\contentsline {subsubsection}{\numberline {1.3.2}MQTT: Message Queuing Telemetry Transport}{6}{subsubsection.1.3.2}
+\contentsline {paragraph}{Toepasselijkheid op de Centrale Bank}{7}{section*.5}
+\contentsline {subsection}{\numberline {1.4}Encryptie}{8}{subsection.1.4}
+\contentsline {paragraph}{TLS/SSL}{8}{section*.6}
+\contentsline {paragraph}{Hashing}{8}{section*.7}
+\contentsline {section}{\numberline {2}Advies: Inrichting Centrale Bank}{9}{section.2}
+\contentsline {paragraph}{Server Communicatie met Encryptie}{9}{section*.8}
+\contentsline {paragraph}{Arduino beveiliging}{9}{section*.9}
+\contentsline {subsection}{\numberline {2.1}Uitbreidbaarheid}{9}{subsection.2.1}
+\contentsline {section}{\numberline {3}Project Management}{11}{section.3}
+\contentsline {subsection}{\numberline {3.1}Kwaliteitseisen}{11}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Code Beheer}{11}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Issue \& Risico}{12}{subsection.3.3}
+\contentsline {paragraph}{Issue Tracking}{12}{section*.10}
+\contentsline {paragraph}{Risico Log}{12}{section*.11}
