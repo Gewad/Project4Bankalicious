@@ -1,0 +1,81 @@
+Wat is MQ
+
+	- queue		> Iets wat wacht op zijn beurt. Wat eest binnenkomt gaat als eerste uit.
+
+	- Message	> Bericht die verzonden wordt tussen zender en ontvangers. Meestal een byte array met een header en een data/opdracht.
+
+	- Message queue	> Een queue aan data
+
+Werken met MQ
+
+	- [Producer(s)] publishing data > [Message broker] stuurt > [Subscriber] (vb. lamp)
+
+Waarom zou je MQ gebruiken
+
+	- voordelen	> redundantie (=herhaaldelijkheid/ergens op te halen) 
+
+			  Dit is handig omdat het zo data kan behouden
+
+			> Pieken in dataverkeer worden makkelijk verwerkt (vb. Stembureau)
+
+			  Je kan meerdere brokers gebruiken, als het te veel wordt bijvoorbeeld.
+
+			> Batches maken (=efficienter)
+	
+			  vb. 10 queries in een Batch 
+
+			> Asynchroon (=Hoeft niet tegelijkertijd) vb. email)
+
+			> Decoupling (=loskoppelen)
+
+			  Stel een server is een tijdje down, dan is dan vaak geen probleem als je een protocol gebruikt.
+			  Hangt af an de applicatie
+
+			> Het is niet programeertaal-afhankelijk
+
+			> Schaalbaarheid
+
+			  Zonder het systeem te beinvloeden kan je het makkelijk vergroten/verkleinen.
+
+			> Volgorde garanderen (want queue)
+
+			> Garantie van eenmalige uitvoering (Ook een optie)
+
+			> Grote taken zijn op te splitsen, hierdoor kan je "tussendoor" dingen uitvoeren. (vermindering wachttijd)
+
+			> Monitoring (Duidelijk data flow)
+
+Protocollen
+
+	- MQ	> subscribe model
+		  Geen zekerheid van aflevering
+		  Weet niet wie de client is
+		  client hoeft niet actief te zijn
+	- MQTT	> point to point model
+		  Zekerheid van eenmalig aflevering
+		  Weet wie de consumer is 
+		  client moet actief zijn
+		  Niet secure
+		  Heel licht
+		  Heeft 5 api methodes()
+		  TCP
+	- AMQP	> advanced message queuing protocol
+		  kan met topics werken en queue
+		  Gebruikt headers (geven topics aan)
+		  Over https (Dus encryptie)
+
+Qos
+	0. Fire & forget	> server praat maar client luisters niet persee ( en stuurt eenzijdig messages)
+	1. At least once	> server praat eenzijdig met client
+	2. Exactly once		> client praat met server
+
+Hoe te gebruiken
+
+	Hoe te doen
+		1. zelf een message queue maken (als je je pc het raam uit wilt gooien)
+		2. een al werkende message queue
+		3. Cloud service
+			- Rabbit MQ (aangeraden) https://www.rabbitmq.com/getstarted.html
+			- IMDB MQ
+			- Azure MQ (microsoft shit)
+			- AWS MQ (Amazon)
