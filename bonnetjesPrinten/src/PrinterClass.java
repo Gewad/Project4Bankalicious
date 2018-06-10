@@ -15,7 +15,8 @@ public class PrinterClass {
         LocalDateTime date = LocalDateTime.now(ZoneId.of("GMT+2"));
         String[] dateTime = date.toString().split("T");
         String[] time = dateTime[1].split("\\.");
-        string = "    klant: " + fName + " " + lName + "\n    EURO: " + amount + "\n    ATM: " + aTM + "\n    datum: " + dateTime[0] + "\n    tijd: " + time[0];
+        string = "       De Obama.cf bank\n            Powered by: \n    Wondel en de Hekkies\n    wondelendehekkies.cf\n \n" +
+                "klant: " + fName + " " + lName + "\nEURO: " + amount + "\nATM: " + aTM + "\ndatum: " + dateTime[0] + "\ntijd: " + time[0];
 
         PrinterJob pj = PrinterJob.getPrinterJob();
 
@@ -49,7 +50,7 @@ public class PrinterClass {
 
     public static class MyPrintable implements Printable {
 
-       private void drawString(Graphics g, String text, int x, int y) {
+        private void drawString(Graphics g, String text, int x, int y) {
 
             for (String line : text.split("\n")) {
                 g.drawString(line, x, y += g.getFontMetrics().getHeight());
@@ -59,8 +60,7 @@ public class PrinterClass {
         private Image getPicture() {
 
             BufferedImage picture;
-            try
-            {
+            try {
                 picture = ImageIO.read(new File("resource/image.jpg"));
             } catch (IOException e) {
                 System.err.println("geen afbeeldig");
@@ -77,9 +77,9 @@ public class PrinterClass {
                 Graphics2D g2d = (Graphics2D) graphics;
                 g2d.translate((int) pageFormat.getImageableX(),
                         (int) pageFormat.getImageableY());
-                g2d.drawImage(getPicture(), 20, 20, 60, 60, null);
+                g2d.drawImage(getPicture(), 52, 20, 60, 60, null);
                 g2d.setFont(new Font("TimesRoman", Font.PLAIN, 10));
-                drawString(g2d, string, 0, 100);
+                drawString(g2d, string, 10, 80);
                 result = PAGE_EXISTS;
             }
             return result;
