@@ -1,0 +1,20 @@
+\babel@toc {dutch}{}
+\contentsline {section}{\numberline {1}Beheren}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Versiebeheer}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Kwaliteitseisen}{3}{subsection.1.2}
+\contentsline {section}{\numberline {2}Analyse \& advies}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Dispenser}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Veiligheid}{4}{subsection.2.2}
+\contentsline {paragraph}{Netwerk encryption}{4}{section*.2}
+\contentsline {paragraph}{lokale encryption}{4}{section*.3}
+\contentsline {paragraph}{Afgesloten hardware}{4}{section*.4}
+\contentsline {subsection}{\numberline {2.3}Biljetten}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Sensoren}{5}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Bonnen}{6}{subsection.2.5}
+\contentsline {paragraph}{Pseudocode uitleg}{6}{section*.5}
+\contentsline {subsection}{\numberline {2.6}Materiaal}{7}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Communicatie}{8}{subsection.2.7}
+\contentsline {section}{\numberline {3}Ontwerp \& realisatie}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Bouwtekening ATM}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Toepassen kwaliteitseisen}{8}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Testen}{8}{subsection.3.3}

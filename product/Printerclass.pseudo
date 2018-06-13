@@ -1,0 +1,19 @@
+public class PrinterClass {
+	String string;
+	// contructor	
+	public PrinterClass(voornaam, achternaam, atmNaam, bedrag){
+		string = inhoud wat geprint moet worden.
+		
+		Printerjob pj = voorbereiden voor printen.
+		pageformat pf = het formaat waarin geprint word.
+		pf.setOrientation(PageFormat.PORTRAIT); zet de oriëntatie naar portrait
+		pf.setPaper(paper); zet hoe groot het papier is zodat alles op de bon komt.
+		pj.setPrintable(new MyPrintable(), pf);
+        try {
+            pj.print();
+        } catch (PrinterException ex) {
+            ex.printStackTrace();
+		}
+		Bovenstaande stukje zorgt ervoor dat het daadwerkelijk geprint word en dat een error word opgevangen.
+	}
+}
