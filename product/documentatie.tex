@@ -5,7 +5,29 @@
 \usepackage{hyperref}
 \usepackage{pdfpages}
 \usepackage{graphicx}
- 
+\usepackage{marvosym}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{listings}
+
+% Variables for source code colors
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% Makeup for source code display
+\lstset{
+        language=C++,
+        basicstyle={\small\ttfamily},
+        numbers=left,
+        numberstyle=\small\color{gray},
+        numberstyle=\tiny\color{gray},
+        keywordstyle=\color{blue},
+        commentstyle=\color{dkgreen},
+        stringstyle=\color{mauve},
+	tabsize=2,
+	breaklines=true,
+}  
 \usepackage{marvosym}
 \usepackage{url} 
 
@@ -18,9 +40,16 @@
 
 \begin{abstract}
 
-Wij moesten...
+De opdracht voor dit project was om een werkende geldautomaat te maken.
+In dit verslag zijn onderzoeksanalysen met adviezen terug te vinden.
+Wij hebben aan de hand van deze adviezen hierna ontwerpen gemaakt en gerealizeerd.
+Wij moeten tijdens de loop van het project letten op vijf onderdelen: \emph{beheren, analyseren, adviseren, ontwerpen en realiseren.}
 
 \end{abstract}
+
+\newpage
+
+\tableofcontents
 
 \newpage
 
@@ -41,6 +70,10 @@ Alle documentatie is terug te vinden op Github.
         \caption{git model}
         \label{fig: git model}
 \end{figure}
+
+\subsection{Kwaliteitseisen}
+
+TODO
 
 \section{Analyse \& advies}
 
@@ -109,23 +142,64 @@ TODO Paul help deze redenen zijn kut.
 
 \newpage
 
-\subsection{Sorteren van biljetten}
+\subsection{Sensoren}
 
-Wat bedoel je met sorteren?
+TODO
+
+\newpage
+\subsection{Bonnen}
+
+\begin{figure}
+        \centering
+        \includegraphics[height=2.0in]{obama_bon.pdf}
+       \caption{Bon ontwerp}
+       \label{fig: Bon ontwerp}
+\end{figure}
+
+Voor het uitgeven van bonnen hebben wij een labelprinter gebruikt.
+In figuur \ref{fig: Bon ontwerp} is de bon te zien die de printer uitprint.
+Hieronder is een link naar de sourcecode.
+
+\vspace{1mm}\
+
+\Mundus~\href{https://github.com/Gewad/Project4Bankalicious/tree/master/bonnetjesPrinten}{Code labelprinter}
+
+\paragraph{Pseudocode uitleg}\ 
+
+\lstinputlisting{Printerclass.pseudo}
+
+\newpage
 
 \subsection{Materiaal}
 
 Hout, want snijder.
 
+\newpage
+
 \subsection{Communicatie}
 
-TODO Netwerk model
+De laptop zal opdrachten sturen naar de Labelprinter en de geld dispenser.
+Zie de netwerk diagram in figuur \ref{fig: Netwerk Diagram}
+
+\begin{figure}[!h]
+        \centering
+        \includegraphics[height=0.9in]{netwerk_diagram.pdf}
+        \caption{Netwerk Diagram}
+        \label{fig: Netwerk Diagram}
+\end{figure}
+
+Hieronder is te zien welke opdrachten de laptop kan versturen naar de verbonden apparaten 
+\lstinputlisting{communicatie.pseudo}
 
 \section{Ontwerp \& realisatie}
 
 \subsection{Bouwtekening ATM}
 
 Kijk wij kunnen tekenen!
+
+\subsection{Toepassen kwaliteitseisen}
+
+Boas TODO
 
 \subsection{Testen}
 
