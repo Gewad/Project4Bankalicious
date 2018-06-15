@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.5.19)  15 JUN 2018 03:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.5)  15 JUN 2018 13:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -687,7 +687,7 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 59.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 59.
-<git.pdf, id=99, 295.1025pt x 73.27374pt>
+<git.pdf, id=129, 295.1025pt x 73.27374pt>
 File: git.pdf Graphic file (type pdf)
 <use git.pdf>
 Package pdftex.def Info: git.pdf  used on input line 70.
@@ -696,161 +696,192 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 75.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 75.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 89.
+
+(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 89.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 81.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 81.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 95.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 95.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 95.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 95.
+(babel)             in language  on input line 106.
  [3 <./git.pdf
 
 pdfTeX warning: pdflatex (file ./git.pdf): PDF inclusion: invalid other resourc
 e which is no dict (key 'ProcSets', type <array>); ignored.
 >]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 97.
+(babel)             in language  on input line 136.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 97.
+(babel)             in language  on input line 136.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 129.
+(babel)             in language  on input line 136.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 129.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 134.
-
- (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 134.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 148.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 148.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 148.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 136.
  [4]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 150.
+(babel)             in language  on input line 138.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 150.
+(babel)             in language  on input line 138.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 144.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 144.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 145.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 146.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 146.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 147.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 147.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 151.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 151.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 154.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 154.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 156.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 156.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 170.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 170.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 170.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 170.
  [5]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 160.
+(babel)             in language  on input line 172.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 160.
-<obama_bon.pdf, id=129, 411.939pt x 614.295pt>
-File: obama_bon.pdf Graphic file (type pdf)
-<use obama_bon.pdf>
-Package pdftex.def Info: obama_bon.pdf  used on input line 164.
-(pdftex.def)             Requested size: 96.9251pt x 144.54pt.
-LaTeX Font Info:    Try loading font information for U+mvs on input line 175.
-
-(/usr/share/texmf-dist/tex/latex/marvosym/umvs.fd)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 179.
- (./Printerclass.pseudo
-Missing character: There is no Ã in font cmtt9!
-Missing character: There is no « in font cmtt9!
-)
+(babel)             in language  on input line 172.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 181.
+(babel)             in language  on input line 204.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 181.
+(babel)             in language  on input line 204.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 181.
+(babel)             in language  on input line 221.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 181.
-
-[6 <./obama_bon.pdf>]
+(babel)             in language  on input line 221.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 183.
+(babel)             in language  on input line 221.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 183.
+(babel)             in language  on input line 221.
+ [6]
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 187.
+(babel)             in language  on input line 223.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 187.
+(babel)             in language  on input line 223.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 187.
+(babel)             in language  on input line 231.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 187.
- [7]
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 189.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 189.
-<netwerk_diagram.pdf, id=175, 198.7425pt x 81.30376pt>
+(babel)             in language  on input line 231.
+<netwerk_diagram.pdf, id=173, 198.7425pt x 81.30376pt>
 File: netwerk_diagram.pdf Graphic file (type pdf)
 <use netwerk_diagram.pdf>
-Package pdftex.def Info: netwerk_diagram.pdf  used on input line 196.
+Package pdftex.def Info: netwerk_diagram.pdf  used on input line 238.
 (pdftex.def)             Requested size: 159.0033pt x 65.04256pt.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 244.
  (./communicatie.pseudo)
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 204.
+(babel)             in language  on input line 247.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 204.
+(babel)             in language  on input line 247.
 Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 206.
+(babel)             in language  on input line 247.
 Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 206.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 210.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 210.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 214.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 214.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 221.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 221.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 221.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 221.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 221.
- [8 <./netwerk_diagram.pdf
+(babel)             in language  on input line 247.
+ [7 <./netwerk_diagram.pdf
 
 pdfTeX warning: pdflatex (file ./netwerk_diagram.pdf): PDF inclusion: invalid o
 ther resource which is no dict (key 'ProcSets', type <array>); ignored.
 >]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 221.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 248.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 248.
+<obama_bon.pdf, id=198, 411.939pt x 614.295pt>
+File: obama_bon.pdf Graphic file (type pdf)
+<use obama_bon.pdf>
+Package pdftex.def Info: obama_bon.pdf  used on input line 252.
+(pdftex.def)             Requested size: 96.9251pt x 144.54pt.
+LaTeX Font Info:    Try loading font information for U+mvs on input line 263.
+ (/usr/share/texmf-dist/tex/latex/marvosym/umvs.fd) (./Printerclass.pseudo
+Missing character: There is no Ã in font cmtt9!
+Missing character: There is no « in font cmtt9!
+)
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 269.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 269.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 269.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 269.
+
+[8 <./obama_bon.pdf>]
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 271.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 271.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 279.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 279.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 281.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 281.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 285.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 285.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 289.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 289.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 296.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 296.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 296.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 296.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 296.
+ [9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 296.
  (./documentatie.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 221.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 221.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 296.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 296.
 Package rerunfilecheck Info: File `documentatie.out' has not changed.
-(rerunfilecheck)             Checksum: 0B57B0C23E6A5AE8A4B30F02AF974043;885.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 221.
+(rerunfilecheck)             Checksum: A1979371919C4AF2F76CBA8E91C973AD;1304.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 296.
  ) 
 Here is how much of TeX's memory you used:
- 18352 strings out of 492982
- 322902 string characters out of 6138579
+ 18375 strings out of 492982
+ 323240 string characters out of 6138580
  485169 words of memory out of 5000000
- 21700 multiletter control sequences out of 15000+600000
- 537312 words of font info for 47 fonts, out of 8000000 for 9000
+ 21708 multiletter control sequences out of 15000+600000
+ 537658 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,12n,58p,10375b,1055s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,12n,58p,10375b,1106s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -859,14 +890,15 @@ r10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf-d
-ist/fonts/type1/public/eurosym/feymr10.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/marvosym/marvosym.pfb>
-Output written on documentatie.pdf (8 pages, 443403 bytes).
+cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf-dist/fonts/type
+1/public/eurosym/feymr10.pfb></usr/share/texmf-dist/fonts/type1/public/marvosym
+/marvosym.pfb>
+Output written on documentatie.pdf (9 pages, 460103 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
- 59 named destinations out of 1000 (max. 500000)
- 136 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 308 PDF objects out of 1000 (max. 8388607)
+ 270 compressed objects within 3 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 184 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -72,9 +72,82 @@ Alle documentatie is terug te vinden op Github.
         \label{fig: git model}
 \end{figure}
 
+\section{Samenwerkingscontract}
+
+\paragraph{Financi\"en}
+
+De kosten voor het gezamenlijke deel van de opdracht(en) worden gezamenlijk betaald, iedereen betaald even veel.
+
+\paragraph{Schades}
+
+Als er iets kapot gaat, worden de kosten van het vervangen gedeeld door de groep tenzij er opzettelijk of onverantwoordelijk mee om is gegaan.
+In dat geval zullen de kosten voor de persoon die de schade heeft aangericht zijn.
+
+\paragraph{Github afspraken}
+
+\begin{itemize}
+\item Niet op de master werken. Je werkt altijd op een eigen kopie van de test branch.
+\item Gelieve geen word bestanden te uploaden zonder ook een pdf te uploaden.
+\item Commits moeten duidelijk beschrijven wat er is aangepast. Liever een paar woorden teveel dan te weinig.
+\item De repo van project 4 is geen zandbak om Git te testen.
+\item Directories zijn met kleine letters en underscores, en hebben een duidelijke naam.
+\item Alle benamingen en commits moeten in het Nederlands.
+\item Branch namen zijn met kleine letters en woorden zijn verbonden met een min teken.
+\end{itemize}
+
+\paragraph{Te laat bij afspraken}
+
+Al onze afspraken worden in goed overleg gepland daarom wordt er van groepsleden verwacht
+dat ze op tijd zijn bij een afspraak (zowel deadlines als overleg) als een groepslid zonder goede
+1
+reden meer dan 5 minuten te laat is dan staat daar een consequentie tegen over. Deze
+consequentie is of 20 chicken mcnuggets of een taart (let op: cake is geen taart!), als er
+meerdere mensen te laat zijn moeten zij allebei iets mee nemen.
+
+\paragraph{Afwezigheid bij afspraken}
+
+Al onze afspraken worden in goed overleg gepland daarom wordt er van groepsleden verwacht
+dat ze bij afspraken aanwezig zijn. als een groepslid zonder goede reden afwezig is bij een
+overleg staat daar een consequentie tegenover. Deze consequentie is of 40 chicken mcnuggets
+of twee taarten. Deze reden zal met de groep besproken moeten worden voordat het een geldige reden is.
+
+\paragraph{Communicatie}
+
+Communiceer goed, dat betekent duidelijk en met respect durf anderen aan te spreken.
+Vraag hulp als je hulp nodig hebt.
+Geef op tijd aan als je wil stoppen met de studie en draag alle onderdelen van het project tijdig
+over aan een ander groepslid.
+
+\paragraph{Rolverdeling}
+
+De rolverdeling staat netjes gedocumenteerd op Github, en ieder teamlid is gediend deze zo
+goed mogelijk uit te voeren.
+\begin{itemize}
+\item Paul H. Organizator
+\item Paul W. Verbinder
+\item Gerard Expert
+\item Merijn Documentatie manager, onderzoeker
+\item Aron Tester
+\item Boas Kwaliteitsbewaker
+\item Floor Designer, expert
+\item Mohammed Designer
+\end{itemize}
+
+\newpage
+
 \subsection{Kwaliteitseisen}
 
-TODO
+TODO Boas, eisen moeten dit en dat doen.
+
+\subsubsection{Code eisen}
+\subsubsection{Product eisen}
+\subsubsection{Eindgebruiker eisen}
+\subsubsection{Git eisen}
+
+Zie sectie \ref{chap:Samenwerkingscontract} voor de eisen voor onze git pagina.
+
+\subsection{Samenwerkingscontract}
+\label{chap:Samenwerkingscontract}
 
 \section{Analyse \& advies}
 
@@ -143,8 +216,6 @@ E\'en dispencer bevat biljetten van \euro{5},
 een ander van \euro{10},
 een ander weer van \euro{20} en \'e\'en van \euro{50}.
 
-TODO Paul help deze redenen zijn kut.
-
 \newpage
 
 \subsection{Sensoren}
@@ -154,6 +225,23 @@ Om de uitgave ban biljetten te meten gaan wij gebruik maken van sensoren.
 Er zullen 4 sensoren gebruikt worden bij elke dispencer.
 Elke sensor kan bijhouden hoeveel biljetten van zijn aangewezen dispencer zijn uitgegeven.
 In het systeem van de ATM wordt dit geregistreed.
+
+TODO bouwtekening.
+
+\subsection{Communicatie}
+
+De laptop zal opdrachten sturen naar de Labelprinter en de geld dispenser.
+Zie de netwerk diagram in figuur \ref{fig: Netwerk Diagram}
+
+\begin{figure}[!h]
+        \centering
+        \includegraphics[height=0.9in]{netwerk_diagram.pdf}
+        \caption{Netwerk Diagram}
+        \label{fig: Netwerk Diagram}
+\end{figure}
+
+Hieronder is in pseudocode te zien welke opdrachten de laptop kan versturen naar de verbonden apparaten 
+\lstinputlisting{communicatie.pseudo}
 
 
 \newpage
@@ -182,24 +270,11 @@ Hieronder is een link naar de sourcecode.
 
 \subsection{Materiaal}
 
-Hout, want snijder.
-
-\newpage
-
-\subsection{Communicatie}
-
-De laptop zal opdrachten sturen naar de Labelprinter en de geld dispenser.
-Zie de netwerk diagram in figuur \ref{fig: Netwerk Diagram}
-
-\begin{figure}[!h]
-        \centering
-        \includegraphics[height=0.9in]{netwerk_diagram.pdf}
-        \caption{Netwerk Diagram}
-        \label{fig: Netwerk Diagram}
-\end{figure}
-
-Hieronder is te zien welke opdrachten de laptop kan versturen naar de verbonden apparaten 
-\lstinputlisting{communicatie.pseudo}
+Er zijn hier een paar opties.
+We kunnen bijvoorbeeld onderdelen 3d printen, maar dat zou erg duur zijn.
+Het meest voor de hand liggende materiaal is triplex hout.
+Dit is een redelijk goedkoop, en makkelijk verkrijgbaar materiaal.
+Wij kunnen dit in het \emph{Tesla Lab} ophalen en daar direct uitsnijden.
 
 \section{Ontwerp \& realisatie}
 
@@ -209,7 +284,7 @@ Kijk wij kunnen tekenen!
 
 \subsection{Toepassen kwaliteitseisen}
 
-Boas TODO
+Boas TODO zijn wel of niet toegepast.
 
 \subsection{Testen}
 
