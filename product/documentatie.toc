@@ -50,9 +50,9 @@
 \contentsline {paragraph}{De geldautomaat is robuust (kan zelfstandig staan en valt niet om/uit elkaar tijdens gebruik)}{18}{section*.37}
 \contentsline {paragraph}{De biljetten in de geldautomaat mogen maximaal de dikte van een speelkaart hebben}{18}{section*.38}
 \contentsline {paragraph}{Na het pinnen wordt er een bon geprint met een bonprinter. Op deze bon staat in ieder geval hoeveel geld er is opgenomen en bij welke (lokale of individuele) bank dit is g ebeurd}{19}{section*.39}
-\contentsline {paragraph}{Er moet encryptie gebruikt worden tussen de geld automaat en de server en tussen de arduino en de computer.}{19}{section*.40}
+\contentsline {paragraph}{Er moet encryptie gebruikt worden tussen de geld automaat en de server en tussen de Arduino en de computer.}{19}{section*.40}
 \contentsline {subsubsection}{\numberline {4.4.2}Eindgebruiker eisen}{19}{subsubsection.4.4.2}
-\contentsline {paragraph}{Een mooie en overzichtelijke gui voor de pin automaat, het moet de oma test kunnen doorstaan (als er tijd is gaan we het echt proberen).}{19}{section*.41}
+\contentsline {paragraph}{Een mooie en overzichtelijke GUI voor de pin automaat, het moet de oma test kunnen doorstaan (als er tijd is gaan we het echt proberen).}{19}{section*.41}
 \contentsline {paragraph}{Het moet niet zomaar uitvallen.}{19}{section*.42}
 \contentsline {paragraph}{De pin automaat moet duidelijk terug communiceren wat de automaat verwacht.}{19}{section*.43}
 \contentsline {paragraph}{Als er geld afgeschreven wordt komt er het zelfde bedrag uit de automaat.}{19}{section*.44}
@@ -61,10 +61,9 @@
 \contentsline {paragraph}{Niet op de master werken. Je werkt altijd op een eigen kopie van de test branch.}{19}{section*.46}
 \contentsline {paragraph}{Gelieve geen word bestanden te uploaden zonder ook een pdf te uploaden.}{19}{section*.47}
 \contentsline {paragraph}{Commits moeten duidelijk beschrijven wat er is aangepast. Liever een paar woorden te veel dan te weinig.}{19}{section*.48}
-\contentsline {paragraph}{De repo van project 4 is geen zandbak om Git te testen.}{19}{section*.49}
+\contentsline {paragraph}{De repository van project 4 is geen zandbak om Git te testen.}{19}{section*.49}
 \contentsline {paragraph}{Directories zijn met kleine letters en underscores, en hebben een duidelijke naam.}{20}{section*.50}
 \contentsline {paragraph}{Alle benamingen en commits moeten in het Nederlands.}{20}{section*.51}
-\contentsline {subsection}{\numberline {4.5}Testen}{20}{subsection.4.5}
-\contentsline {section}{\numberline {5}Bijlagen}{21}{section.5}
-\contentsline {subsection}{\numberline {5.1}Klassen diagram GUI}{21}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Risicolog}{22}{subsection.5.2}
+\contentsline {section}{\numberline {5}Bijlagen}{}{section.5}
+\contentsline {subsection}{\numberline {5.1}Klassen diagram GUI}{}{subsection.5.1}
+\contentsline {section}{\numberline {6}Risico log}{}{section.6}

@@ -1,6 +1,7 @@
 \documentclass{article}
 
 \usepackage[dutch]{babel}
+\usepackage{rotating,booktabs}
 \usepackage[version=3]{mhchem}
 \usepackage{hyperref}
 \usepackage{pdfpages}
@@ -13,6 +14,8 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{float}
+\usepackage{marvosym}
+
 
 % Variables for source code colors
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -45,8 +48,8 @@
 \begin{abstract}
 
 De opdracht voor dit project was om een werkende geldautomaat te maken.
-In dit verslag zijn onderzoeksanalysen met adviezen terug te vinden.
-Wij hebben aan de hand van deze adviezen hierna ontwerpen gemaakt en gerealizeerd.
+In dit verslag zijn onderzoek analysen met adviezen terug te vinden.
+Wij hebben aan de hand van deze adviezen hierna ontwerpen gemaakt en gerealiseerd.
 Wij moeten tijdens de loop van het project letten op vijf onderdelen: \emph{beheren, analyseren, adviseren, ontwerpen en realiseren.}
 
 \end{abstract}
@@ -64,7 +67,11 @@ Hier is veel onderzoek over gedaan zodat het goed toegepast kan worden dit proje
 In figuur \ref{fig: git model} is het model wat wij gebruiken op onze Git pagina, \href{https://github.com/Gewad/Project4Bankalicious}{Project4Bankalicious}.
 Ieder groepslid werkt op zijn individuele branch, en als je klaar bent met jouw onderdeel, dan wordt hij in test gemerged.
 Als er geen problemen lijken te zijn op de test beslissen wij in een groep of wij test naar de master kunnen schrijven.
-Alle documentatie is terug te vinden op Github.
+Alle documentatie is terug te vinden op Github.\
+
+\vspace{1mm}
+
+\Mundus~\href{https://github.com/Gewad/Project4Bankalicious/issues}{Issues on Github}
 
 \begin{figure}[!h]
         \centering
@@ -91,7 +98,7 @@ In dat geval zullen de kosten voor de persoon die de schade heeft aangericht zij
 \item Niet op de master werken. Je werkt altijd op een eigen kopie van de test branch.
 \item Gelieve geen word bestanden te uploaden zonder ook een pdf te uploaden.
 \item Commits moeten duidelijk beschrijven wat er is aangepast. Liever een paar woorden teveel dan te weinig.
-\item De repo van project 4 is geen zandbak om Git te testen.
+\item De repository van project 4 is geen zandbak om Git te testen.
 \item Directories zijn met kleine letters en underscores, en hebben een duidelijke naam.
 \item Alle benamingen en commits moeten in het Nederlands.
 \item Branch namen zijn met kleine letters en woorden zijn verbonden met een min teken.
@@ -103,14 +110,14 @@ Al onze afspraken worden in goed overleg gepland daarom wordt er van groepsleden
 dat ze op tijd zijn bij een afspraak (zowel deadlines als overleg) als een groepslid zonder goede
 1
 reden meer dan 5 minuten te laat is dan staat daar een consequentie tegen over. Deze
-consequentie is of 20 chicken mcnuggets of een taart (let op: cake is geen taart!), als er
+consequentie is of 20 chicken McNuggets of een taart (let op: cake is geen taart!), als er
 meerdere mensen te laat zijn moeten zij allebei iets mee nemen.
 
 \paragraph{Afwezigheid bij afspraken}
 
 Al onze afspraken worden in goed overleg gepland daarom wordt er van groepsleden verwacht
-dat ze bij afspraken aanwezig zijn. als een groepslid zonder goede reden afwezig is bij een
-overleg staat daar een consequentie tegenover. Deze consequentie is of 40 chicken mcnuggets
+dat ze bij afspraken aanwezig zijn. Als een groepslid zonder goede reden afwezig is bij een
+overleg staat daar een consequentie tegenover. Deze consequentie is of 40 chicken McNuggets
 of twee taarten. Deze reden zal met de groep besproken moeten worden voordat het een geldige reden is.
 
 \paragraph{Communicatie}
@@ -125,12 +132,12 @@ over aan een ander groepslid.
 De rolverdeling staat netjes gedocumenteerd op Github, en ieder teamlid is gediend deze zo
 goed mogelijk uit te voeren.
 \begin{itemize}
-\item Paul H. Organizator
+\item Paul H. Organisator
 \item Paul W. Verbinder
 \item Gerard Expert
 \item Merijn Documentatie manager, onderzoeker
 \item Aron Tester
-\item Boas Kwaliteitsbewaker
+\item Boas Kwaliteit bewaker
 \item Floor Designer, expert
 \item Mohammed Designer
 \end{itemize}
@@ -138,7 +145,7 @@ goed mogelijk uit te voeren.
 \newpage
 
 \subsection{Kwaliteitseisen}
-Aan het begin van het project hebben we een paar eisen besreven waar ons eindproduct aan moet voldoen, ze staan hieronder.
+Aan het begin van het project hebben we een paar eisen beschreven waar ons eindproduct aan moet voldoen, ze staan hieronder.
 
 \subsubsection{Code eisen}
 \begin{itemize}
@@ -163,16 +170,16 @@ Variabele moeten een goede en duidelijk naam hebben en een vaste structuur volge
         \item De geldautomaat is robuust (kan zelfstandig staan en valt niet om/uit elkaar tijdens gebruik)
         \item De biljetten in de geldautomaat mogen maximaal de dikte van een speelkaart hebben
         \item Na het pinnen wordt er een bon geprint met een bonprinter. Op deze bon staat in ieder geval hoeveel geld er is opgenomen en bij welke (lokale of individuele) bank dit is gebeurd
-        \item Er moet encryptie gebruikt worden tussen de geld automaat en de server en tussen de arduino en de computer.
+        \item Er moet encryptie gebruikt worden tussen de geld automaat en de server en tussen de Arduino en de computer.
 \end{itemize}
 
 \subsubsection{Eindgebruiker eisen}
 \begin{itemize}
-        \item Een mooie en overzichtelijke gui voor de pin automaat, het moet de oma test kunnen doorstaan (als er tijd is gaan we het echt proberen).
+        \item Een mooie en overzichtelijke GUI voor de pin automaat, het moet de oma test kunnen doorstaan (als er tijd is gaan we het echt proberen).
         \item Het moet niet zomaar uitvallen.
         \item De pin automaat moet duidelijk terug communiceren wat de automaat verwacht.
         \item Als er geld afgeschreven wordt komt er het zelfde bedrag uit de automaat.
-        \item Als er lange tijd niks gebeurd wordt de gebruiker automoties uitgelogd.
+        \item Als er lange tijd niks gebeurd wordt de gebruiker automatiche uitgelogd.
 \end{itemize}
 
 \subsubsection{Git eisen}
@@ -180,7 +187,7 @@ Variabele moeten een goede en duidelijk naam hebben en een vaste structuur volge
         \item Niet op de master werken. Je werkt altijd op een eigen kopie van de test branch.
         \item Gelieve geen word bestanden te uploaden zonder ook een pdf te uploaden.
         \item Commits moeten duidelijk beschrijven wat er is aangepast. Liever een paar woorden veel dan te weinig.
-        \item De repo van project 4 is geen zandbak om Git te testen.
+        \item De repository van project 4 is geen zandbak om Git te testen.
         \item Directories zijn met kleine letters en underscores, en hebben een duidelijke naam.
         \item Alle benamingen en commits moeten in het Nederlands.
 \end{itemize}
@@ -447,13 +454,13 @@ We gebruiken speelkarten als biljetten, die zijn dus niet te dik.
 ebeurd}\
 De bonnetjes printen, op de bonnetjes staat ht loge van de bank, de naam van de klant, het opgenomen bedrag, bij welke automaat de pintransactie is gedaan, de datum en de tijd.
 
-\paragraph{Er moet encryptie gebruikt worden tussen de geld automaat en de server en tussen de arduino en de computer.}
+\paragraph{Er moet encryptie gebruikt worden tussen de geld automaat en de server en tussen de Arduino en de computer.}
 Dit hebben we niet gedaan.
 
 \subsubsection{Eindgebruiker eisen}
 
-\paragraph{Een mooie en overzichtelijke gui voor de pin automaat, het moet de oma test kunnen doorstaan (als er tijd is gaan we het echt proberen).}
-We hebben de oma test niet geprobeerd maar vinden de gui zelf erg duidelijk.
+\paragraph{Een mooie en overzichtelijke GUI voor de pin automaat, het moet de oma test kunnen doorstaan (als er tijd is gaan we het echt proberen).}
+We hebben de oma test niet geprobeerd maar vinden de GUI zelf erg duidelijk.
 
 \paragraph{Het moet niet zomaar uitvallen.}
 Tenzij de gebreuker het actief kapot maakt blijft het werken.
@@ -472,24 +479,17 @@ Dit gebeurt niet.
 Ja dit hebben we allemaal gedaan.
 
 \paragraph{Gelieve geen word bestanden te uploaden zonder ook een pdf te uploaden.}
-We hebben alle word bestanden ook geupload als .pdg.
+We hebben alle word bestanden ook ge\"upload als .pdf.
 
 \paragraph{Commits moeten duidelijk beschrijven wat er is aangepast. Liever een paar woorden te veel dan te weinig.}
 De meeste commits zij vrij duidelijk, sommige hadden beter gekund.
 
-\paragraph{De repo van project 4 is geen zandbak om Git te testen.}
-We hebben de project 4 repo niet gebruikt als zandbak.
+\paragraph{De repository van project 4 is geen zandbak om Git te testen.}
+We hebben de project 4 repository niet gebruikt als zandbak.
 \paragraph{Directories zijn met kleine letters en underscores, en hebben een duidelijke naam.}
 Alle directories voldoen aan deze eisen behalve die van Floor.
 \paragraph{Alle benamingen en commits moeten in het Nederlands.}
-Het grootste deel van de commits is voledig in het nederlands, sommige computer termen zijn wel in het engels.
-
-\subsection{Testen}
-
-%\textbf{Aron moet dit doen}
-%Tijdens het testen...
-%Dit dat blijkt kut...
-%Dit dat zo gefixed...
+Het grootste deel van de commits is volledig in het Nederlands, sommige computer termen zijn wel in het Engels.
 
 \newpage
 \section{Bijlagen}
@@ -502,11 +502,67 @@ Het grootste deel van de commits is voledig in het nederlands, sommige computer 
        \label{fig: Klassediagram GUI}
 \end{figure}
 
-\subsection{Risicolog}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=4.0in]{team_risico.pdf}
-	\caption{Risicolog}
-	\label{fig: Team Risicolog}
-\end{figure}
+\section{Risico log}
+
+Hieronder is het risico log gedocumenteerd.
+Hier staan de problemen die wij tijdens het project hebben behandeld.
+Er staat hier ook hoe en of ze zijn opgelost.
+
+%-----table-----%
+
+\begin{sidewaystable}[t]
+
+\pagenumbering{gobble}
+
+% table settings
+\caption{Risico log}
+\label{tab: Risico log}
+\bigskip
+\hspace*{-1cm}\begin{tabular}{l l c c c c l  c c c c}
+%\toprule
+\newcounter{counter}
+\setcounter{counter}{1}
+
+%table content
+&\textbf{Beschrijving risico} &\textbf{Kans} &\textbf{Impact} &\textbf{Risico}&     \textbf{Maatregel}  &\textbf{Status} &\textbf{Beschrijving status} &\textbf{Da    tum} \\
+\midrule
+\textbf{ \arabic{counter}} & Computer teamlid crasht            & 1 & 2 & 2 & G    it gebruiken & N & Alles staat op Git & 018-5-9 \\
+\addtocounter{counter}{1}
+\textbf{\arabic{counter}} & Groepslid verlaat het team      	& 1 & 4 & 4 & T    Taken overdragen & O & Hierover hebben wij afspraken & 018-5-16 \\
+\addtocounter{counter}{1}
+\textbf{\arabic{counter}} & Iemand breekt de Git pagina         & 3 & 4 & 12 &     Version control leren met git & O & Iedereen kent Git nu & 018-5-16 \\
+\addtocounter{counter}{1}
+\textbf{\arabic{counter}} & Groepslid is vaak afwezig           & 2 & 3 & 6 & U    \shortstack{updates geven wat \\ we hebben gedaan} & O & Aron en Floor zijn vaak afwezig & 018-5-16 \\
+\addtocounter{counter}{1}
+\textbf{\arabic{counter}} & Klant eis vervalt                   & 5 & 5 & 25 &     Back up taak nodig & O & Paul W verloor zijn taak & 018-6-20 \\
+
+\end{tabular}\hspace*{-1cm}
+\end{sidewaystable}
+
+%-----table-----%
+\begin{sidewaystable}[h!]
+
+% table settings
+\caption{Tabel beschrijving}
+\label{tab: Tabel beschrijving}
+\bigskip
+\centering\small\setlength\tabcolsep{2pt}
+\hspace*{-1cm}\begin{tabular}{l l l l }
+
+% table content
+\textbf{Afkorting} &\textbf{Beschrijving} \\
+N       & Nog geen probleem \\
+O       & Opgelost probleem \\
+B       & Nu een Bezig probleem \\
+NO      & Probleem niet kunnen oplossen \\
+\textbf{Rows} &\textbf{Aantal} \\
+Impact  & [1-5] \\
+Kans    & [1-5] \\
+Risico  & [Impact*Kans] \\
+Datum   & Datum toegevoegd \\
+
+\end{tabular}\hspace*{-1cm}
+\end{sidewaystable}
+
+
 \end{document}

@@ -1,0 +1,36 @@
+Obama.cf Bank
+\
+Bytegroep 10
+
+Brought to you by:
+• Wondel en de Hekies
+
+Dispensers:
+• Vier dispensers
+• "Schiet" speelkaarten
+
+Arduino 1 (Inlogpacket)
+• RFID reader
+• Keypad
+
+Arduino 2 (motoren)
+• Lego motoren
+• 12v
+• Schiet kaarten
+
+Bonnenprinter:
+• Print Obama bonnen
+• *Zie bon*
+
+Laptop:
+• stuurt arduino's aan
+• Stuurt printer aan
+• ATM GUI
+
+Kast:
+• Verbind alle dispensers
+• Veilig:
+  - Je kan er niet met je hand in
+  - alles is afgesloten
+
+Thanks / questions?
