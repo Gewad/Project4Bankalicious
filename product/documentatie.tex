@@ -137,30 +137,56 @@ goed mogelijk uit te voeren.
 
 \newpage
 
-\section{Kwaliteitseisen}
-
-%TODO Boas, eisen moeten dit en dat doen.
+\subsection{Kwaliteitseisen}
+Aan het begin van het project hebben we een paar eisen besreven waar ons eindproduct aan moet voldoen, ze staan hieronder.
 
 \subsubsection{Code eisen}
-De code eisen:
 \begin{itemize}
-	\item De bonnentjes printer moet aangeroepen kunnen worden de GUI
-	\item De motoren moeten aangestuurd worden door de GUI
-	\item De 
+\item De code moet leesbaar zijn voor iedereen dus ook voor mensen die het niet geschreven hebben. Het doel is dat al onze ouders ook kunnen begrijpen wat er staat, een onderdeel hier van is
+ commends.
+\item De code moet zo efficiënt mogelijk zijn.
+Variabele moeten een goede en duidelijk naam hebben en een vaste structuur volgen, namen van klasse beginnen met een Hoofdletter, namen van andere variabelen beginnen met een kleine letter.
+        \item Als een variabele bestaat uit twee woorden begint het tweede woord met een Hoofdletter. Aka camelcase bv. camelCase.
+        \item Splits zoveel mogelijk code op in classes en methodes. Stop bijbehorende code in een pakkage.
+        \item Maak eerst een klasse diagram voor dat je gaat programmeren.
+        \item In bestandsnamen mogen geen * worden gebruik dit vind Windows namelijk niet leuk.
 \end{itemize}
 
 \subsubsection{Product eisen}
 \begin{itemize}
-	\item Het product moet 4 verschillende biljetten kunnen uitgeven
-	\item Het product moet gebruik maken van motoren om het de biljetten uit te geven
+        \item De geldautomaat moet  biljetten van tenminste vier verschillende waarden uit kunnen geven
+        \item De gebruiker kan niet, zonder een pin-opdracht te geven, geld uit de automaat halen
+        \item De geldautomaat geeft altijd het juiste bedrag
+        \item De geldautomaat geeft alleen geld als het saldo toereikend is
+        \item De gebruiker kan zelf selecteren welke biljetten hij/zij wil ontvangen
+        \item De gebruiker kan geen biljetten kiezen die niet aanwezig zijn in de geldautomaat
+        \item De geldautomaat is robuust (kan zelfstandig staan en valt niet om/uit elkaar tijdens gebruik)
+        \item De biljetten in de geldautomaat mogen maximaal de dikte van een speelkaart hebben
+        \item Na het pinnen wordt er een bon geprint met een bonprinter. Op deze bon staat in ieder geval hoeveel geld er is opgenomen en bij welke (lokale of individuele) bank dit is gebeurd
+        \item Er moet encryptie gebruikt worden tussen de geld automaat en de server en tussen de arduino en de computer.
 \end{itemize}
 
 \subsubsection{Eindgebruiker eisen}
+\begin{itemize}
+        \item Een mooie en overzichtelijke gui voor de pin automaat, het moet de oma test kunnen doorstaan (als er tijd is gaan we het echt proberen).
+        \item Het moet niet zomaar uitvallen.
+        \item De pin automaat moet duidelijk terug communiceren wat de automaat verwacht.
+        \item Als er geld afgeschreven wordt komt er het zelfde bedrag uit de automaat.
+        \item Als er lange tijd niks gebeurd wordt de gebruiker automoties uitgelogd.
+\end{itemize}
+
 \subsubsection{Git eisen}
+\begin{itemize}
+        \item Niet op de master werken. Je werkt altijd op een eigen kopie van de test branch.
+        \item Gelieve geen word bestanden te uploaden zonder ook een pdf te uploaden.
+        \item Commits moeten duidelijk beschrijven wat er is aangepast. Liever een paar woorden veel dan te weinig.
+        \item De repo van project 4 is geen zandbak om Git te testen.
+        \item Directories zijn met kleine letters en underscores, en hebben een duidelijke naam.
+        \item Alle benamingen en commits moeten in het Nederlands.
+\end{itemize}
 
+\subsubsection{Git eisen}
 Zie sectie \ref{chap:Samenwerkingscontract} voor de eisen voor onze git pagina.
-
-
 
 \section{Analyse \& advies}
 
@@ -197,7 +223,7 @@ Dit kost echter een hoop rekenkracht, en je gegevens zullen op een paar plaatsen
 
 Een oplossing hiervoor is om gevoelige gegevens te hashen, en vervolgens in de database op te slaan.
 Als je bijvoorbeeld wilt controleren of een pincode klopt, zal deze eerst gehasht worden en vervolgens vergeleken met wat er in de database staat.
-Een veelgebruikt hashing algoritme voor java en c++, de talen waar wij in programmeren, is bijvoorbeeld md5.
+Een veelgebruikt hashing algoritme voor java en c++, de talen waar wij in programmeren, is bijvoorbeeld md5.:
 Het is beter om een hashing algoritme te gebruiken wat iets zwaarder is dan md5, omdat je een hash makkelijk terug kunt rekenen.
 Een beter veelgebruikt algoritme is bijvoorbeeld SHA1.
 Deze adviseren wij te gebruiken.
@@ -368,8 +394,97 @@ Deze bleek goed, en wij hebben \emph{Ontwerp 2.0} dus uiteindelijk drie keer ext
 \end{figure}
 
 \subsection{Toepassen kwaliteitseisen}
+In deze paragraaf worden de de kwaliteids eisen die we eerder hebben opgesteld vergeleken met het eindproduct.
 
-%Boas TODO zijn wel of niet toegepast.
+\paragraph{De code moet leesbaar zijn voor iedereen dus ook voor mensen die het niet geschreven hebben. Het doel is dat al onze ouders ook kunnen begrijpen wat er staat, een onderdeel hier v
+an is commends.}
+We denken niet dat onze ouders de code kunnen begrijpen, de code is wel lees en begrijpbaar door anderen mensen met programeer kennis. We hebben wel overal netjes code ingesprongen.
+
+\paragraph{De code moet zo efficiënt mogelijk zijn.}
+De code is redelijk efficent, er zit alleen wel een while(true), daarom is het programma vrij zwaar op het systeem. Een mogelijkheid om de code te verbeteren is het vervangen van wile loop's
+ door interupts.
+
+\paragraph{Variabele moeten een goede en duidelijk naam hebben en een vaste structuur volgen, namen van klasse beginnen met een Hoofdletter, namen van andere variabelen beginnen met een klei
+ne letter.}
+Dit hebben we goed gedaan.
+
+\paragraph{Als een variabele bestaat uit twee woorden begint het tweede woord met een Hoofdletter. Aka camelcase bv. camelCase.}
+Dit hebben we ook goed gedaan.
+
+\paragraph{Splits zoveel mogelijk code op in classes en methodes. Stop bijbehorende code in een pakkage.}
+We hebben redelijk veel verschillende classes en methodes, dit had meer kunnen zijn maar is over het algemeen goed. We hebben geen pakkage's gebruikt.
+
+\paragraph{Maak eerst een klasse diagram voor dat je gaat programmeren.}
+Het grootste gedeelte van de code was al klaar voordat we met dit project begonnen dit is daarom onrelevand.
+
+\paragraph{In bestandsnamen mogen geen * worden gebruik dit vind Windows namelijk niet leuk.}
+We hebben een * gebruikt in bestands namen.
+
+\subsubsection{Product eisen}
+\paragraph{De geldautomaat moet  biljetten van tenminste vier verschillende waarden uit kunnen geven}
+Dat kan
+
+\paragraph{De gebruiker kan niet, zonder een pin-opdracht te geven, geld uit de automaat halen}
+Het is niet mogelijk om geld uit de automaat te halen zonder pin opdracht.
+
+\paragraph{De geldautomaat geeft altijd het juiste bedrag}
+Meestal geeft de automaat het juiste bedrag, er zijn allen momenten dat er per ongeluk een extra biljet uit komt.
+
+\paragraph{De geldautomaat geeft alleen geld als het saldo toereikend is}
+De automaat cheked eerst het saldo voordat hij geld uitgeeft.
+
+\paragraph{De gebruiker kan zelf selecteren welke biljetten hij/zij wil ontvangen}
+Dit kan, mits er genoeg biljetten in de automaat zitten.
+
+\paragraph{De gebruiker kan geen biljetten kiezen die niet aanwezig zijn in de geldautomaat}
+De automaat houdt bij hoeveel biljetten er nog in de automaat zitten.
+
+\paragraph{De geldautomaat is robuust (kan zelfstandig staan en valt niet om/uit elkaar tijdens gebruik)}
+De automaat is stefig genoeg om te blijven staan en niet uit elkaar te vallen, als er geweld word gebruikt gaat hij wel kapot.
+
+\paragraph{De biljetten in de geldautomaat mogen maximaal de dikte van een speelkaart hebben}
+We gebruiken speelkarten als biljetten, die zijn dus niet te dik.
+
+\paragraph{Na het pinnen wordt er een bon geprint met een bonprinter. Op deze bon staat in ieder geval hoeveel geld er is opgenomen en bij welke (lokale of individuele) bank dit is g
+ebeurd}\
+De bonnetjes printen, op de bonnetjes staat ht loge van de bank, de naam van de klant, het opgenomen bedrag, bij welke automaat de pintransactie is gedaan, de datum en de tijd.
+
+\paragraph{Er moet encryptie gebruikt worden tussen de geld automaat en de server en tussen de arduino en de computer.}
+Dit hebben we niet gedaan.
+
+\subsubsection{Eindgebruiker eisen}
+
+\paragraph{Een mooie en overzichtelijke gui voor de pin automaat, het moet de oma test kunnen doorstaan (als er tijd is gaan we het echt proberen).}
+We hebben de oma test niet geprobeerd maar vinden de gui zelf erg duidelijk.
+
+\paragraph{Het moet niet zomaar uitvallen.}
+Tenzij de gebreuker het actief kapot maakt blijft het werken.
+
+\paragraph{De pin automaat moet duidelijk terug communiceren wat de automaat verwacht.}
+Dit is over het algemeen goed maar kan op sommige momenten nog net iets beter.
+
+\paragraph{Als er geld afgeschreven wordt komt er het zelfde bedrag uit de automaat.}
+Dit gaat meestal goed, soms komt er allen iets te veel geld uit.
+
+\paragraph{Als er lange tijd niks gebeurd wordt de gebruiker automoties uitgelogd.}
+Dit gebeurt niet.
+
+\subsubsection{Git eisen}
+\paragraph{Niet op de master werken. Je werkt altijd op een eigen kopie van de test branch.}
+Ja dit hebben we allemaal gedaan.
+
+\paragraph{Gelieve geen word bestanden te uploaden zonder ook een pdf te uploaden.}
+We hebben alle word bestanden ook geupload als .pdg.
+
+\paragraph{Commits moeten duidelijk beschrijven wat er is aangepast. Liever een paar woorden te veel dan te weinig.}
+De meeste commits zij vrij duidelijk, sommige hadden beter gekund.
+
+\paragraph{De repo van project 4 is geen zandbak om Git te testen.}
+We hebben de project 4 repo niet gebruikt als zandbak.
+\paragraph{Directories zijn met kleine letters en underscores, en hebben een duidelijke naam.}
+Alle directories voldoen aan deze eisen behalve die van Floor.
+\paragraph{Alle benamingen en commits moeten in het Nederlands.}
+Het grootste deel van de commits is voledig in het nederlands, sommige computer termen zijn wel in het engels.
 
 \subsection{Testen}
 
