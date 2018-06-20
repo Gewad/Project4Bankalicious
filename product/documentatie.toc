@@ -66,3 +66,4 @@
 \contentsline {paragraph}{Alle benamingen en commits moeten in het Nederlands.}{20}{section*.51}
 \contentsline {subsection}{\numberline {4.5}Testen}{20}{subsection.4.5}
 \contentsline {section}{\numberline {5}Bijlagen}{21}{section.5}
+\contentsline {subsection}{\numberline {5.1}Klassen diagram GUI}{21}{subsection.5.1}
