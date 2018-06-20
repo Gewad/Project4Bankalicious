@@ -22,22 +22,6 @@
 \contentsline {subsection}{\numberline {4.3}Biljetten}{6}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Sensoren}{7}{subsection.4.4}
 \contentsline {subsection}{\numberline {4.5}Communicatie}{7}{subsection.4.5}
-<<<<<<< HEAD
-<<<<<<< HEAD
-\contentsline {subsection}{\numberline {4.6}Bonnen}{8}{subsection.4.6}
-\contentsline {paragraph}{Pseudocode uitleg}{8}{section*.12}
-\contentsline {subsection}{\numberline {4.7}Materiaal}{9}{subsection.4.7}
-\contentsline {section}{\numberline {5}Ontwerp \& realisatie}{10}{section.5}
-\contentsline {subsection}{\numberline {5.1}Ontwerp proces dispensers}{10}{subsection.5.1}
-\contentsline {paragraph}{Ontwerp}{10}{figure.4}
-\contentsline {paragraph}{Ontwerp 2.0}{10}{section*.14}
-\contentsline {subsection}{\numberline {5.2}Bouwtekening ATM}{10}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Electrisch schema}{10}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Toepassen kwaliteitseisen}{10}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Testen}{11}{subsection.5.5}
-=======
-=======
->>>>>>> 0abefc37a1b6afbeeb4ee12317a0bdf1000cf496
 \contentsline {subsection}{\numberline {4.6}Bonnen}{9}{subsection.4.6}
 \contentsline {paragraph}{Pseudocode uitleg}{9}{section*.16}
 \contentsline {subsection}{\numberline {4.7}Materiaal}{10}{subsection.4.7}
@@ -50,7 +34,3 @@
 \contentsline {subsection}{\numberline {5.4}Toepassen kwaliteitseisen}{14}{subsection.5.4}
 \contentsline {subsection}{\numberline {5.5}Testen}{14}{subsection.5.5}
 \contentsline {section}{\numberline {6}Bijlagen}{15}{section.6}
-<<<<<<< HEAD
->>>>>>> 0abefc37a1b6afbeeb4ee12317a0bdf1000cf496
-=======
->>>>>>> 0abefc37a1b6afbeeb4ee12317a0bdf1000cf496
