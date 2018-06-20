@@ -22,15 +22,15 @@
 \contentsline {subsection}{\numberline {4.3}Biljetten}{6}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Sensoren}{7}{subsection.4.4}
 \contentsline {subsection}{\numberline {4.5}Communicatie}{7}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}Bonnen}{8}{subsection.4.6}
-\contentsline {paragraph}{Pseudocode uitleg}{8}{section*.15}
-\contentsline {subsection}{\numberline {4.7}Materiaal}{9}{subsection.4.7}
-\contentsline {section}{\numberline {5}Ontwerp \& realisatie}{10}{section.5}
-\contentsline {subsection}{\numberline {5.1}Ontwerp proces dispensers}{10}{subsection.5.1}
-\contentsline {paragraph}{Ontwerp}{10}{figure.caption.17}
-\contentsline {paragraph}{Ontwerp 2.0}{10}{section*.18}
-\contentsline {subsection}{\numberline {5.2}Bouwtekening ATM}{11}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Electrisch schema}{12}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Toepassen kwaliteitseisen}{13}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Testen}{13}{subsection.5.5}
-\contentsline {section}{\numberline {6}Bijlagen}{14}{section.6}
+\contentsline {subsection}{\numberline {4.6}Bonnen}{9}{subsection.4.6}
+\contentsline {paragraph}{Pseudocode uitleg}{9}{section*.16}
+\contentsline {subsection}{\numberline {4.7}Materiaal}{10}{subsection.4.7}
+\contentsline {section}{\numberline {5}Ontwerp \& realisatie}{11}{section.5}
+\contentsline {subsection}{\numberline {5.1}Ontwerp proces dispensers}{11}{subsection.5.1}
+\contentsline {paragraph}{Ontwerp}{11}{figure.caption.18}
+\contentsline {paragraph}{Ontwerp 2.0}{11}{section*.19}
+\contentsline {subsection}{\numberline {5.2}Bouwtekening ATM}{12}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Electrisch schema}{13}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Toepassen kwaliteitseisen}{14}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Testen}{14}{subsection.5.5}
+\contentsline {section}{\numberline {6}Bijlagen}{15}{section.6}
