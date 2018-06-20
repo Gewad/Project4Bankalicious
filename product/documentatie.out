@@ -1,0 +1,27 @@
+\BOOKMARK [1][-]{section.1}{Version control}{}% 1
+\BOOKMARK [1][-]{section.2}{Samenwerkingscontract}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Kwaliteitseisen}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Code eisen}{subsection.2.1}% 4
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Product eisen}{subsection.2.1}% 5
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Eindgebruiker eisen}{subsection.2.1}% 6
+\BOOKMARK [3][-]{subsubsection.2.1.4}{Git eisen}{subsection.2.1}% 7
+\BOOKMARK [3][-]{subsubsection.2.1.5}{Git eisen}{subsection.2.1}% 8
+\BOOKMARK [1][-]{section.3}{Analyse \046 advies}{}% 9
+\BOOKMARK [2][-]{subsection.3.1}{Dispenser}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.2}{Veiligheid}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.3}{Biljetten}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.4}{Sensoren}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.5}{Communicatie}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.6}{Bonnen}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.7}{Materiaal}{section.3}% 16
+\BOOKMARK [1][-]{section.4}{Ontwerp \046 realisatie}{}% 17
+\BOOKMARK [2][-]{subsection.4.1}{Ontwerp proces dispensers}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.2}{Bouwtekening ATM}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.3}{Electrisch schema}{section.4}% 20
+\BOOKMARK [2][-]{subsection.4.4}{Toepassen kwaliteitseisen}{section.4}% 21
+\BOOKMARK [3][-]{subsubsection.4.4.1}{Product eisen}{subsection.4.4}% 22
+\BOOKMARK [3][-]{subsubsection.4.4.2}{Eindgebruiker eisen}{subsection.4.4}% 23
+\BOOKMARK [3][-]{subsubsection.4.4.3}{Git eisen}{subsection.4.4}% 24
+\BOOKMARK [2][-]{subsection.4.5}{Testen}{section.4}% 25
+\BOOKMARK [1][-]{section.5}{Bijlagen}{}% 26
+\BOOKMARK [2][-]{subsection.5.1}{Klassen diagram GUI}{section.5}% 27

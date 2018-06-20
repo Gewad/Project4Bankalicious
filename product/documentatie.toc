@@ -1,0 +1,69 @@
+\babel@toc {dutch}{}
+\contentsline {section}{\numberline {1}Version control}{3}{section.1}
+\contentsline {section}{\numberline {2}Samenwerkingscontract}{3}{section.2}
+\contentsline {paragraph}{Financi\"en}{3}{section*.3}
+\contentsline {paragraph}{Schades}{3}{section*.4}
+\contentsline {paragraph}{Github afspraken}{3}{section*.5}
+\contentsline {paragraph}{Te laat bij afspraken}{4}{section*.6}
+\contentsline {paragraph}{Afwezigheid bij afspraken}{4}{section*.7}
+\contentsline {paragraph}{Communicatie}{4}{section*.8}
+\contentsline {paragraph}{Rolverdeling}{4}{section*.9}
+\contentsline {subsection}{\numberline {2.1}Kwaliteitseisen}{5}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Code eisen}{5}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Product eisen}{5}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Eindgebruiker eisen}{6}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Git eisen}{6}{subsubsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.5}Git eisen}{6}{subsubsection.2.1.5}
+\contentsline {section}{\numberline {3}Analyse \& advies}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Dispenser}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Veiligheid}{8}{subsection.3.2}
+\contentsline {paragraph}{Netwerk encryption}{8}{section*.10}
+\contentsline {paragraph}{lokale encryption}{8}{section*.11}
+\contentsline {paragraph}{Afgesloten hardware}{8}{section*.12}
+\contentsline {subsection}{\numberline {3.3}Biljetten}{8}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Sensoren}{9}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Communicatie}{9}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Bonnen}{11}{subsection.3.6}
+\contentsline {paragraph}{Pseudocode uitleg}{11}{section*.16}
+\contentsline {subsection}{\numberline {3.7}Materiaal}{13}{subsection.3.7}
+\contentsline {section}{\numberline {4}Ontwerp \& realisatie}{14}{section.4}
+\contentsline {subsection}{\numberline {4.1}Ontwerp proces dispensers}{14}{subsection.4.1}
+\contentsline {paragraph}{Ontwerp}{14}{figure.caption.18}
+\contentsline {paragraph}{Ontwerp 2.0}{14}{section*.19}
+\contentsline {subsection}{\numberline {4.2}Bouwtekening ATM}{15}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Electrisch schema}{17}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Toepassen kwaliteitseisen}{18}{subsection.4.4}
+\contentsline {paragraph}{De code moet leesbaar zijn voor iedereen dus ook voor mensen die het niet geschreven hebben. Het doel is dat al onze ouders ook kunnen begrijpen wat er staat, een onderdeel hier v an is commends.}{18}{section*.24}
+\contentsline {paragraph}{De code moet zo effici\IeC {\"e}nt mogelijk zijn.}{18}{section*.25}
+\contentsline {paragraph}{Variabele moeten een goede en duidelijk naam hebben en een vaste structuur volgen, namen van klasse beginnen met een Hoofdletter, namen van andere variabelen beginnen met een klei ne letter.}{18}{section*.26}
+\contentsline {paragraph}{Als een variabele bestaat uit twee woorden begint het tweede woord met een Hoofdletter. Aka camelcase bv. camelCase.}{18}{section*.27}
+\contentsline {paragraph}{Splits zoveel mogelijk code op in classes en methodes. Stop bijbehorende code in een pakkage.}{19}{section*.28}
+\contentsline {paragraph}{Maak eerst een klasse diagram voor dat je gaat programmeren.}{19}{section*.29}
+\contentsline {paragraph}{In bestandsnamen mogen geen * worden gebruik dit vind Windows namelijk niet leuk.}{19}{section*.30}
+\contentsline {subsubsection}{\numberline {4.4.1}Product eisen}{19}{subsubsection.4.4.1}
+\contentsline {paragraph}{De geldautomaat moet \IeC {\nobreakspace }biljetten van tenminste vier verschillende waarden uit kunnen geven}{19}{section*.31}
+\contentsline {paragraph}{De gebruiker kan niet, zonder een pin-opdracht te geven, geld uit de automaat halen}{19}{section*.32}
+\contentsline {paragraph}{De geldautomaat geeft altijd het juiste bedrag}{19}{section*.33}
+\contentsline {paragraph}{De geldautomaat geeft alleen geld als het saldo toereikend is}{19}{section*.34}
+\contentsline {paragraph}{De gebruiker kan zelf selecteren welke biljetten hij/zij wil ontvangen}{19}{section*.35}
+\contentsline {paragraph}{De gebruiker kan geen biljetten kiezen die niet aanwezig zijn in de geldautomaat}{19}{section*.36}
+\contentsline {paragraph}{De geldautomaat is robuust (kan zelfstandig staan en valt niet om/uit elkaar tijdens gebruik)}{19}{section*.37}
+\contentsline {paragraph}{De biljetten in de geldautomaat mogen maximaal de dikte van een speelkaart hebben}{19}{section*.38}
+\contentsline {paragraph}{Na het pinnen wordt er een bon geprint met een bonprinter. Op deze bon staat in ieder geval hoeveel geld er is opgenomen en bij welke (lokale of individuele) bank dit is g ebeurd}{20}{section*.39}
+\contentsline {paragraph}{Er moet encryptie gebruikt worden tussen de geld automaat en de server en tussen de arduino en de computer.}{20}{section*.40}
+\contentsline {subsubsection}{\numberline {4.4.2}Eindgebruiker eisen}{20}{subsubsection.4.4.2}
+\contentsline {paragraph}{Een mooie en overzichtelijke gui voor de pin automaat, het moet de oma test kunnen doorstaan (als er tijd is gaan we het echt proberen).}{20}{section*.41}
+\contentsline {paragraph}{Het moet niet zomaar uitvallen.}{20}{section*.42}
+\contentsline {paragraph}{De pin automaat moet duidelijk terug communiceren wat de automaat verwacht.}{20}{section*.43}
+\contentsline {paragraph}{Als er geld afgeschreven wordt komt er het zelfde bedrag uit de automaat.}{20}{section*.44}
+\contentsline {paragraph}{Als er lange tijd niks gebeurd wordt de gebruiker automoties uitgelogd.}{20}{section*.45}
+\contentsline {subsubsection}{\numberline {4.4.3}Git eisen}{20}{subsubsection.4.4.3}
+\contentsline {paragraph}{Niet op de master werken. Je werkt altijd op een eigen kopie van de test branch.}{20}{section*.46}
+\contentsline {paragraph}{Gelieve geen word bestanden te uploaden zonder ook een pdf te uploaden.}{20}{section*.47}
+\contentsline {paragraph}{Commits moeten duidelijk beschrijven wat er is aangepast. Liever een paar woorden te veel dan te weinig.}{20}{section*.48}
+\contentsline {paragraph}{De repo van project 4 is geen zandbak om Git te testen.}{20}{section*.49}
+\contentsline {paragraph}{Directories zijn met kleine letters en underscores, en hebben een duidelijke naam.}{21}{section*.50}
+\contentsline {paragraph}{Alle benamingen en commits moeten in het Nederlands.}{21}{section*.51}
+\contentsline {subsection}{\numberline {4.5}Testen}{21}{subsection.4.5}
+\contentsline {section}{\numberline {5}Bijlagen}{22}{section.5}
+\contentsline {subsection}{\numberline {5.1}Klassen diagram GUI}{22}{subsection.5.1}
