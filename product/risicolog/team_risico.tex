@@ -1,0 +1,64 @@
+\documentclass{article}
+
+\usepackage{graphicx,rotating,booktabs}
+\usepackage[dutch]{babel}
+
+\begin{document}
+% no page numbers
+\pagenumbering{gobble}
+
+%-----table-----%
+\begin{sidewaystable}[t]
+
+% table settings
+\caption{Risico log}
+\label{tab: Risico log}
+\bigskip
+\hspace*{-1cm}\begin{tabular}{l l c c c c l  c c c c}
+%\toprule
+\newcounter{counter}
+\setcounter{counter}{1}
+
+%table content
+&\textbf{Beschrijving risico} &\textbf{Kans} &\textbf{Impact} &\textbf{Risico}& \textbf{Maatregel}  &\textbf{Status} &\textbf{Beschrijving status} &\textbf{Datum} \\
+\midrule
+
+\textbf{ \arabic{counter}} & Computer teamlid crasht		& 1 & 2 & 2 & Git gebruiken & N & Alles staat op Git & 018-5-9 \\
+\addtocounter{counter}{1}
+\textbf{\arabic{counter}} & Een groepslid verlaat het team	& 1 & 4 & 4 & Taken overdragen & O & Hierover hebben wij afspraken & 018-5-16 \\
+\addtocounter{counter}{1}
+\textbf{\arabic{counter}} & Iemand breekt de Git pagina 	& 3 & 4 & 12 & Version control leren met git & O & Iedereen kent Git nu & 018-5-16 \\
+\addtocounter{counter}{1}
+\textbf{\arabic{counter}} & Groepslid is vaak afwezig		& 2 & 3 & 6 & Updaten wat we hebben gedaan & O & Aron en Floor zijn vaak afwezig & 018-5-16 \\
+\addtocounter{counter}{1}
+\textbf{\arabic{counter}} & Klant eis vervalt			& 5 & 5 & 25 & Back up taak nodig & O & Paul W verloor zijn taak & 018-6-20 \\
+
+\end{tabular}\hspace*{-1cm}
+\end{sidewaystable}
+
+%-----table-----%
+\begin{sidewaystable}[h!]
+
+% table settings
+\caption{Tabel beschrijving}
+\label{tab: Tabel beschrijving}
+\bigskip
+\centering\small\setlength\tabcolsep{2pt}
+\hspace*{-1cm}\begin{tabular}{l l l l }
+
+% table content
+\textbf{Afkorting} &\textbf{Beschrijving} \\
+N	& Nog geen probleem \\
+O	& Opgelost probleem \\
+B	& Nu een Bezig probleem \\
+NO	& Probleem niet kunnen oplossen \\
+\textbf{Rows} &\textbf{Aantal} \\
+Impact 	& [1-5] \\
+Kans 	& [1-5] \\
+Risico 	& [Impact*Kans] \\
+Datum	& Datum toegevoegd \\
+
+\end{tabular}\hspace*{-1cm}
+\end{sidewaystable}
+
+\end{document}

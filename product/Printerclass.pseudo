@@ -1,4 +1,4 @@
-public class PrinterClass {
+public class Printerclass {
 	String string;
 	// contructor	
 	public PrinterClass(voornaam, achternaam, atmNaam, bedrag){
@@ -6,7 +6,7 @@ public class PrinterClass {
 		
 		Printerjob pj = voorbereiden voor printen.
 		pageformat pf = het formaat waarin geprint word.
-		pf.setOrientation(PageFormat.PORTRAIT); zet de oriëntatie naar portrait
+		pf.setOrientation(PageFormat.PORTRAIT); zet de orientatie naar portrait
 		pf.setPaper(paper); zet hoe groot het papier is zodat alles op de bon komt.
 		pj.setPrintable(new MyPrintable(), pf);
         try {
