@@ -10,6 +10,9 @@
 \usepackage{wrapfig}
 \usepackage{listings}
 \usepackage[gen]{eurosym}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
 
 % Variables for source code colors
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -136,7 +139,7 @@ goed mogelijk uit te voeren.
 
 \section{Kwaliteitseisen}
 
-TODO Boas, eisen moeten dit en dat doen.
+%TODO Boas, eisen moeten dit en dat doen.
 
 \subsubsection{Code eisen}
 \subsubsection{Product eisen}
@@ -224,7 +227,7 @@ Er zullen 4 sensoren gebruikt worden bij elke dispencer.
 Elke sensor kan bijhouden hoeveel biljetten van zijn aangewezen dispencer zijn uitgegeven.
 In het systeem van de ATM wordt dit geregistreed.
 
-TODO bouwtekening.
+%TODO bouwtekening.
 
 \subsection{Communicatie}
 
@@ -241,6 +244,8 @@ Zie de netwerk diagram in figuur \ref{fig: Netwerk Diagram}
 Hieronder is in pseudocode te zien welke opdrachten de laptop kan versturen naar de verbonden apparaten 
 \lstinputlisting{communicatie.pseudo}
 
+Voor de communicatie tussen de klassen in de GUI van de automaat zijn in een diagram weergegeven.
+Om deze te bezichten, zie de bijlage.
 
 \newpage
 \subsection{Bonnen}
@@ -307,21 +312,63 @@ Deze bleek goed, en wij hebben \emph{Ontwerp 2.0} dus uiteindelijk drie keer ext
 
 \subsection{Bouwtekening ATM}
 
-paul w todo
+\begin{figure}[H]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[height=2.5in]{voorkant.png}
+  \captionof{figure}{Vooraanzicht ATM}
+  \label{fig:voorkant}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[height=2.5in]{zijkant.png}
+  \captionof{figure}{Zijaanzicht ATM}
+  \label{fig:zijkant}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+       \centering
+       \includegraphics[height=2.5in]{achterkant.png}
+       \caption{Achterkant ATM}
+       \label{fig: Achteraanzicht ATM}
+\end{figure}
 
 \subsection{Electrisch schema}
+\begin{figure}[H]
+       \centering
+       \includegraphics[height=4.5in]{Input_schema.pdf}
+       \caption{Keypad en RFID}
+       \label{fig: Keypad en RFID}
+\end{figure}
 
-Paul h  todo
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=3.0in]{Dispenser_schema.pdf}
+	\caption{Dispencer Schema}
+	\label{fig: Dispencer Schema}
+\end{figure}
 
 \subsection{Toepassen kwaliteitseisen}
 
-Boas TODO zijn wel of niet toegepast.
+%Boas TODO zijn wel of niet toegepast.
 
 \subsection{Testen}
 
-\textbf{Aron moet dit doen}
-Tijdens het testen...
-Dit dat blijkt kut...
-Dit dat zo gefixed...
+%\textbf{Aron moet dit doen}
+%Tijdens het testen...
+%Dit dat blijkt kut...
+%Dit dat zo gefixed...
+
+\newpage
+\section{Bijlagen}
+
+\begin{figure}[!h]
+       \centering
+       \includegraphics[height=4.5in]{Klassediagram.pdf}
+       \caption{Klassediagram GUI}
+       \label{fig: Klassediagram GUI}
+\end{figure}
 
 \end{document}
